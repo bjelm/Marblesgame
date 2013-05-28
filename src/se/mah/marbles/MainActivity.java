@@ -1,14 +1,17 @@
 package se.mah.marbles;
 
 import java.util.ArrayList;
-import java.util.Collections;
+
 import java.util.Random;
+
+
+import se.mah.highscore.HighScore;
 
 
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.PowerManager;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -16,8 +19,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.graphics.drawable.AnimationDrawable;
-import android.graphics.drawable.DrawableContainer;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Menu;
@@ -33,7 +34,7 @@ import android.widget.Checkable;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 public class MainActivity extends Activity {
 
@@ -48,7 +49,7 @@ public class MainActivity extends Activity {
 	private int i=0;
 	private int firstClick,secondClick;
 	private boolean mChecked;
-   private TextView scoreTxt ;
+    private TextView scoreTxt ;
 	private Cardcollection myCards = new Cardcollection();
 	private Game myGame = new Game("simple");
 	
@@ -165,6 +166,12 @@ public class MainActivity extends Activity {
 	randomList.clear();
 	randomList = myCards.getMycards("simple");
 	myImageAdapter.notifyDataSetChanged();
+	
+	 Intent i = new Intent(this,HighScore.class );
+	
+	 i.putExtra("score",myGame.getScore());	
+	 startActivity(i);
+		finish();
 	
 	
 
@@ -308,8 +315,7 @@ public class MainActivity extends Activity {
 	    	//Change state here
 	    }
 	 };
-	
-	
+	 
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

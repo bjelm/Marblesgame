@@ -79,13 +79,21 @@ public class HighScore extends Activity{
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 			// TODO Auto-generated method stub
 		String s = data.getExtras().getString("name");
+		
+		////test!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		int i = data.getExtras().getInt("score");
+		
+		
+		
 		Log.i("filip", "hittar extras" + " "+ s );
 		//Om man hŠr vill lŠgga till en ny post i listan så hŠr 
 		Random r = new Random(); //Kšr lite random så det kan bli olika poster
 		int score = r.nextInt(100); //Ger ett random mellan 1 o 100;
 		if (score > scoreList.get(9).getPoints()){
-		Person p = new Person(s, "A" +score);
-		p.addPoints(score);
+//		Person p = new Person(s, "A" +score);
+//		p.addPoints(score);
+			Person p = new Person(s, "A" +i);
+			p.addPoints(i);
 		scoreList.add(p);
 		updateScoreList();
 		}else{
