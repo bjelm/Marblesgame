@@ -27,6 +27,11 @@
         
         
         <activity android:name="se.mah.highscore.HighScore"></activity>
+         
+        <activity android:name="se.mah.highscore.NameInput"></activity>
+          
+          <activity android:name="se.mah.highscore.Sorry"></activity>
+        
    
         
         </application>
