@@ -167,12 +167,8 @@ public class MainActivity extends Activity {
 	randomList = myCards.getMycards("simple");
 	myImageAdapter.notifyDataSetChanged();
 	
-	 Intent i = new Intent(this,HighScore.class );
 	
-	 i.putExtra("score",myGame.getScore());	
-	 startActivity(i);
-		finish();
-	
+	gameOver();
 	
 
 	}
@@ -317,6 +313,15 @@ public class MainActivity extends Activity {
 	 };
 	 
 
+	 public void gameOver(){
+	 Intent i = new Intent(this,HighScore.class );
+		
+	 i.putExtra("score",myGame.getScore());	
+	 startActivity(i);
+		finish();
+}
+	 
+	 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
