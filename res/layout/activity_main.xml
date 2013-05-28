@@ -48,7 +48,7 @@
         android:baselineAlignBottom="true"
         android:onClick="shuffleClick"
         android:scaleType="fitCenter"
-        android:src="@drawable/buttonon"
+        android:src="@drawable/button_state"
          />
 
 </LinearLayout>
