@@ -1,0 +1,322 @@
+package se.mah.marbles;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
+
+
+
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.PowerManager;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.DrawableContainer;
+import android.util.AttributeSet;
+import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager.LayoutParams;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.BaseAdapter;
+import android.widget.Checkable;
+import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+
+
+	private Animation anim;
+	private Animation anim_nopar;
+	private GridView gridView;
+	private ImageAdapter myImageAdapter;	
+	private CheckableImageView cv;
+	private CheckableImageView cv_first;
+	private static int numOfChecks;
+	private int i=0;
+	private int firstClick,secondClick;
+	private boolean mChecked;
+   private TextView scoreTxt ;
+	private Cardcollection myCards = new Cardcollection();
+	private Game myGame = new Game("simple");
+	
+    private ArrayList<Picture> randomList = new ArrayList<Picture>(myCards.getMycards(myGame.getLevel()));
+   
+    @Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		
+		getWindow().addFlags(LayoutParams.FLAG_KEEP_SCREEN_ON);
+		
+		setContentView(R.layout.activity_main);
+		scoreTxt = (TextView) findViewById(R.id.scoreview);
+		anim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.myanim);
+		anim_nopar = AnimationUtils.loadAnimation(MainActivity.this, R.anim.noparanim);
+		Effects.getInstance().init(this);
+		gridView = (GridView) findViewById(R.id.gridview);
+		myImageAdapter=new ImageAdapter(this);
+		myImageAdapter.notifyDataSetChanged();
+		gridView.setAdapter(myImageAdapter);
+		gridView.invalidateViews();
+		scoreTxt.setText("Score: "+myGame.getScore());
+	
+		
+		gridView.setOnItemClickListener(new OnItemClickListener() {
+			 
+			boolean clicked=false;
+			@Override
+			public void onItemClick(AdapterView parent, View v, int position,long id) {
+				
+
+				scoreTxt.setText("Score: "+myGame.getScore());
+			
+				
+				
+				  cv = (CheckableImageView) v;
+				  cv.toggle();
+				if (!clicked){
+				cv_first = (CheckableImageView) v;
+				
+				clicked=true;
+				}
+				
+				
+				Effects.getInstance().playSound(Effects.SOUND_1);
+				
+				
+				 
+				  
+//				  cv.toggle();
+			      
+		          i++;
+			      if (i%2 !=0){
+			    	  
+			    	  firstClick=position;
+			    	
+			      }else{
+			    	  
+			    	  secondClick=position;
+			    	
+			    	 if (firstClick == secondClick){
+			    		 cv.startAnimation(anim_nopar);
+				    	 cv_first.startAnimation(anim_nopar);
+				    	 
+				    	 Effects.getInstance().playSound(Effects.SOUND_6);
+			    	 }
+			    	
+			    	  
+			    	 else if (randomList.get(firstClick).returnCategory() == randomList.get(secondClick).returnCategory()){
+			    	
+			         randomList.set(firstClick, myCards.getMycards(myGame.getLevel()).get(randomInt()));
+			    	 randomList.set(secondClick,myCards.getMycards(myGame.getLevel()).get(randomInt()));
+			    	
+			    	 cv.startAnimation(anim);
+			    	 cv_first.startAnimation(anim);
+			    	 
+			    	 Effects.getInstance().playSound(Effects.SOUND_5);
+			    	 myGame.addScore(1000);
+			    	 scoreTxt.setText("Score: "+myGame.getScore());
+			    	 
+			    	 }else{
+			    		 
+			    	 cv.startAnimation(anim_nopar);
+			    	 cv_first.startAnimation(anim_nopar);
+			    	 
+			    	 Effects.getInstance().playSound(Effects.SOUND_6);
+
+			    	 }
+			    	 
+			    	 
+			    	 mChecked=false;
+			    	 clicked=false;
+                 
+			    	//   myImageAdapter.notifyDataSetChanged();
+//			    		
+//			    	 cv.setBackgroundResource(R.drawable.movie);
+//				    AnimationDrawable megAnimation =(AnimationDrawable)cv.getBackground();
+//					 megAnimation.start();
+			    	
+			    
+			    	
+			    	 Handler myHandler = new Handler();
+			    	 myHandler.postDelayed(myRunnable, 500);
+
+			      }
+			   
+			}
+		});
+
+	}
+
+	public void shuffleClick(View v) {
+		
+	randomList.clear();
+	randomList = myCards.getMycards("simple");
+	myImageAdapter.notifyDataSetChanged();
+	
+	
+
+	}
+	
+	public class ImageAdapter extends BaseAdapter {
+		private Context context;
+		CheckableImageView imageView;
+		public ImageAdapter(Context c) {
+			context = c;
+
+		}
+
+		@Override
+		public int getCount() {
+			// TODO Auto-generated method stub
+			// return randomList.size();
+			return 12;
+		}
+
+		@Override
+		public Object getItem(int position) {
+			// TODO Auto-generated method stub
+			return position;
+		}
+
+		@Override
+		public long getItemId(int position) {
+			// TODO Auto-generated method stub
+			return position;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+
+		
+			
+			if (convertView == null) {
+				imageView = new CheckableImageView(context, null);
+				imageView.setLayoutParams(new GridView.LayoutParams(170,181));
+				//imageView.setLayoutParams(new GridView.LayoutParams(200,213));
+				imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+				imageView.setPadding(10,10,10,10);
+				
+
+			} else {
+				imageView = (CheckableImageView) convertView;
+				
+
+			}
+
+			
+			
+		
+			
+			 imageView.setImageResource(randomList.get(position).getPicture());
+		
+		
+			
+		
+           
+			return imageView;
+		}
+		
+
+	}
+
+	 
+
+	public class CheckableImageView extends ImageView implements Checkable {
+		
+		
+		//private boolean mChecked;
+
+		public CheckableImageView(final Context context,
+				final AttributeSet attrs) {
+			super(context, attrs);
+		}
+
+	    @Override
+		public void toggle() {
+			setChecked(!mChecked);
+			//Toast.makeText(getBaseContext(), "toggle  "+mChecked, Toast.LENGTH_SHORT).show();
+						
+		}
+
+		@Override
+		public boolean isChecked() {
+			//Toast.makeText(getBaseContext(), "checked", Toast.LENGTH_SHORT).show();
+			return mChecked;
+		}
+
+		@Override
+		public void setChecked(final boolean checked) {
+			
+			
+			if (mChecked == checked)
+				return;
+			mChecked = checked;
+	        invalidate();
+			
+			if(checked==true){
+			numOfChecks++;
+			}
+			else if(checked==false){
+				numOfChecks--;
+			}
+			
+			Log.i("checkcount",numOfChecks+"");
+			
+		}
+
+		 @Override
+		 protected void onDraw(Canvas canvas) {
+			 super.onDraw(canvas);
+			 if(mChecked) {
+				 Bitmap check = BitmapFactory.decodeResource(getResources(), R.drawable.ropadope);
+				 canvas.drawBitmap(check, 3,3, new Paint());
+				 mChecked=false;
+				 
+				
+			 
+		}
+	}
+		 }
+	
+	public int randomInt(){
+		Random r = new Random ();
+		int i = r.nextInt(12-0);
+		return i;
+	}
+	
+	
+	private Runnable myRunnable = new Runnable()
+	{
+	    @Override
+	    public void run()
+	    {
+	    	 myImageAdapter.notifyDataSetChanged();
+	    	//mChecked= false;
+	    	//Change state here
+	    }
+	 };
+	
+	
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		getActionBar().hide();
+		return true;
+	}
+
+}
