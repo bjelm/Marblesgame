@@ -83,7 +83,9 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		//till tiden
-		
+		myTimer = new MyTimer(50000, 1000);
+		myTimer.start();
+		myTimer.cancel();
 		mProgressBar=(ProgressBar)findViewById(R.id.progressbar);
 		
 		mProgressBar.setProgress(0);
@@ -363,6 +365,8 @@ public class MainActivity extends Activity {
 		getActionBar().hide();
 		return true;
 	}
+	
+	
  // hör till tiden
 	public void AddTime(){
 		myTimer.cancel();
@@ -377,15 +381,14 @@ public class MainActivity extends Activity {
 		myTimer = new MyTimer(time, sec);
 		myTimer.start();
 	}
+	
+	// timer-klass
 	private class MyTimer extends CountDownTimer {
 
-		
 	    public MyTimer(int millisInFuture, int countDownInterval) {
 			super(millisInFuture, countDownInterval);
 			// TODO Auto-generated constructor stub
 		}
-
-
 
 		@Override
 	    public void onTick(long millisUntilFinished) {
@@ -394,14 +397,9 @@ public class MainActivity extends Activity {
 	    	tidms = millisUntilFinished;
 	    	tidsint = (int) tidms/1000;
 	       
-	        mProgressBar.setProgress(tidsint);		           
-	       
-	     
-	  
+	        mProgressBar.setProgress(tidsint);		 
 	    }
 	    
-
-
 	    @Override
 	    public void onFinish() {
 	   
@@ -409,16 +407,9 @@ public class MainActivity extends Activity {
 	        mProgressBar.setProgress(tidsint);		         
 	        
 	        gameOver();
-	        
-	        
-	        
-	        
-	        
 	    }
 	 }
 
-	//
-	
 	
 }
 
