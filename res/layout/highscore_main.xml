@@ -342,12 +342,6 @@
 
     </TableRow>
 
-    <Button
-        android:id="@+id/Button01"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="5dp"
-        android:onClick="onClick"
-        android:text="Gå till nameinput för test" />
+    
 
 </TableLayout>

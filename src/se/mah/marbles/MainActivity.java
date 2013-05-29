@@ -6,6 +6,7 @@ import java.util.Random;
 
 
 import se.mah.highscore.HighScore;
+import se.mah.highscore.NameInput;
 
 
 
@@ -314,11 +315,14 @@ public class MainActivity extends Activity {
 	 
 
 	 public void gameOver(){
-	 Intent i = new Intent(this,HighScore.class );
+	 
+		 int p =  myGame.getScore();
 		
-	 i.putExtra("score",myGame.getScore());	
-	 startActivity(i);
-		finish();
+	     Log.i("finalscore",p+"");
+         Intent i = new Intent(this,HighScore.class );
+	     i.putExtra("score",p);	
+	     startActivity(i);
+		 finish();
 }
 	 
 	 

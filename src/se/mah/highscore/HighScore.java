@@ -3,7 +3,7 @@ package se.mah.highscore;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
+
 
 import se.mah.marbles.R;
 
@@ -22,8 +22,8 @@ public class HighScore extends Activity{
 	private Button submit;
 	private EditText scoreinput;
 	private ArrayList<Person> scoreList;
-
-
+	private int mPoints;
+    
 	
 	
 	@Override
@@ -66,6 +66,11 @@ public class HighScore extends Activity{
 		scoreinput= (EditText) findViewById(R.id.namn);
 		submit= (Button) findViewById(R.id.restart);
 		updateScoreList();	//Uppdatera visning.
+		
+        mPoints = getIntent().getExtras().getInt("score");
+		
+		Intent j = new Intent(this, NameInput.class);
+		startActivityForResult(j, 0);  
 	}
 
 	@Override
@@ -78,25 +83,17 @@ public class HighScore extends Activity{
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 			// TODO Auto-generated method stub
+		
 		String s = data.getExtras().getString("name");
-		
-		////test!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-		int i = data.getExtras().getInt("score");
-		
-		
-		
-		Log.i("filip", "hittar extras" + " "+ s );
-		//Om man hŠr vill lŠgga till en ny post i listan så hŠr 
-		Random r = new Random(); //Kšr lite random så det kan bli olika poster
-		int score = r.nextInt(100); //Ger ett random mellan 1 o 100;
-		if (score > scoreList.get(9).getPoints()){
-//		Person p = new Person(s, "A" +score);
-//		p.addPoints(score);
-			Person p = new Person(s, "A" +i);
-			p.addPoints(i);
+
+	    if (mPoints >= scoreList.get(9).getPoints()){
+
+        Person p = new Person(s, "A" +mPoints);
+		p.addPoints(mPoints);
 		scoreList.add(p);
 		updateScoreList();
-		}else{
+	
+	    }else{
 			Intent j = new Intent(this, Sorry.class);
 			startActivity(j);
 		}
@@ -134,11 +131,5 @@ public class HighScore extends Activity{
 		
 	
 		}
-    //denna ska bytas ut och sŠttas i if satsen som sŠger if score>= scoreList.get(9).getPoints(); fast utan onClick
-	public void onClick(View v){
-		Intent i = new Intent(this, NameInput.class);
-		startActivityForResult(i, 0); //Det var fel metod denna gör att vi väntar på svar
-	
-	}
 
  }
