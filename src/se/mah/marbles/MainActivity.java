@@ -5,12 +5,15 @@ import java.util.ArrayList;
 import java.util.Random;
 
 
+
+
 import se.mah.highscore.HighScore;
 import se.mah.highscore.NameInput;
 
 
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 
 import android.app.Activity;
@@ -34,6 +37,7 @@ import android.widget.BaseAdapter;
 import android.widget.Checkable;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
@@ -54,6 +58,20 @@ public class MainActivity extends Activity {
 	private Cardcollection myCards = new Cardcollection();
 	private Game myGame = new Game("simple");
 	
+	// Saker till tidsräkningen
+	ProgressBar mProgressBar;
+	CountDownTimer mCountDownTimer;
+	
+	
+	 int tidsint = 30;
+	 int time= 30000;
+	 int sec = 1000;
+	 
+	 
+	 long tidms;
+	 private MyTimer myTimer;
+	//
+	
     private ArrayList<Picture> randomList = new ArrayList<Picture>(myCards.getMycards(myGame.getLevel()));
    
     @Override
@@ -63,6 +81,18 @@ public class MainActivity extends Activity {
 		getWindow().addFlags(LayoutParams.FLAG_KEEP_SCREEN_ON);
 		
 		setContentView(R.layout.activity_main);
+		
+		//till tiden
+		
+		mProgressBar=(ProgressBar)findViewById(R.id.progressbar);
+		
+		mProgressBar.setProgress(0);
+		myTimer = new MyTimer(time, sec);
+		myTimer.start();
+		//
+		
+		
+		
 		scoreTxt = (TextView) findViewById(R.id.scoreview);
 		anim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.myanim);
 		anim_nopar = AnimationUtils.loadAnimation(MainActivity.this, R.anim.noparanim);
@@ -114,7 +144,7 @@ public class MainActivity extends Activity {
 			    	 if (firstClick == secondClick){
 			    		 cv.startAnimation(anim_nopar);
 				    	 cv_first.startAnimation(anim_nopar);
-				    	 
+				    	 RemoveTime();
 				    	 Effects.getInstance().playSound(Effects.SOUND_6);
 			    	 }
 			    	
@@ -130,9 +160,9 @@ public class MainActivity extends Activity {
 			    	 Effects.getInstance().playSound(Effects.SOUND_5);
 			    	 myGame.addScore(1000);
 			    	 scoreTxt.setText("Score: "+myGame.getScore());
-			    	 
+			    	 AddTime();
 			    	 }else{
-			    		 
+			    		 RemoveTime();
 			    	 cv.startAnimation(anim_nopar);
 			    	 cv_first.startAnimation(anim_nopar);
 			    	 
@@ -162,15 +192,15 @@ public class MainActivity extends Activity {
 
 	}
 
+    
+    
 	public void shuffleClick(View v) {
 		
 	randomList.clear();
 	randomList = myCards.getMycards("simple");
 	myImageAdapter.notifyDataSetChanged();
 	
-	
-	gameOver();
-	
+
 
 	}
 	
@@ -333,5 +363,68 @@ public class MainActivity extends Activity {
 		getActionBar().hide();
 		return true;
 	}
+ // hör till tiden
+	public void AddTime(){
+		myTimer.cancel();
+		time = (int)tidms +5000;
+		myTimer = new MyTimer(time, sec);
+		myTimer.start();
+	}
+	
+	public void RemoveTime(){
+		myTimer.cancel();
+		time = (int)tidms -5000;
+		myTimer = new MyTimer(time, sec);
+		myTimer.start();
+	}
+	private class MyTimer extends CountDownTimer {
 
+		
+	    public MyTimer(int millisInFuture, int countDownInterval) {
+			super(millisInFuture, countDownInterval);
+			// TODO Auto-generated constructor stub
+		}
+
+
+
+		@Override
+	    public void onTick(long millisUntilFinished) {
+	    	
+	    	Log.v("Log_tag", time +"      Tick of Progress       " + tidsint + "          " + millisUntilFinished / 100);
+	    	tidms = millisUntilFinished;
+	    	tidsint = (int) tidms/1000;
+	       
+	        mProgressBar.setProgress(tidsint);		           
+	       
+	     
+	  
+	    }
+	    
+
+
+	    @Override
+	    public void onFinish() {
+	   
+	        tidsint--;
+	        mProgressBar.setProgress(tidsint);		         
+	        
+	        gameOver();
+	        
+	        
+	        
+	        
+	        
+	    }
+	 }
+
+	//
+	
+	
 }
+
+
+
+
+
+
+
