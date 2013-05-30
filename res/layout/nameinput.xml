@@ -21,25 +21,25 @@
         android:background="@drawable/bababab"
         android:ems="10" />
 
-    <TextView
-        android:id="@+id/congratz"
-        android:layout_width="350dp"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="300dp" />
-
     <ImageButton
   android:id="@+id/restart"
         android:layout_width="140dp"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_below="@+id/namn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:onClick="submit"
         android:src="@drawable/ok" />
+
+    <TextView
+        android:id="@+id/congratz"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_alignLeft="@+id/namn"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="274dp"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
 </RelativeLayout>
