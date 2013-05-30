@@ -84,6 +84,7 @@ public class HighScore extends Activity{
 	        }else{
 	    		Log.i("HIGHSCOREscore", "score "+mPoints);
 				Intent j = new Intent(this, Sorry.class);
+				j.putExtra("points", mPoints);
 				startActivity(j);
 				
 			}

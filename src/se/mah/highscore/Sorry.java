@@ -24,9 +24,10 @@ public class Sorry extends Activity {
 		
 		
 		Sorry = (TextView) findViewById(R.id.firstTxt);
+		int points = getIntent().getExtras().getInt("points");
 		
 		//String s2= getIntent().getExtras().getString("Sorry");
-		Sorry.setText("Tyvärr, du fick inte tillräckligt med poäng fär topplistan! \n Din poäng: " + "blabla");
+		Sorry.setText("Tyvärr, du fick inte tillräckligt med poäng fär topplistan! \n Din poäng: " + points);
 		
 }
 	public void start (View v){
