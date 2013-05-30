@@ -56,7 +56,7 @@ public class Effects {
 	soundPoolMap.put(SOUND_2, soundPool.load(context, R.raw.cartoon024, 4));
 	soundPoolMap.put(SOUND_5, soundPool.load(context, R.raw.kidscheering, 5));
 	soundPoolMap.put(SOUND_6, soundPool.load(context, R.raw.nope, 6));
-	soundPoolMap.put(SOUND_7, soundPool.load(context, R.raw.nope, 7));
+	soundPoolMap.put(SOUND_7, soundPool.load(context, R.raw.wood, 7));
 
 	AudioManager audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
 	volume = audioManager.getStreamVolume(AudioManager.STREAM_SYSTEM);
