@@ -104,7 +104,7 @@ public class MainActivity extends Activity {
 		myImageAdapter.notifyDataSetChanged();
 		gridView.setAdapter(myImageAdapter);
 		gridView.invalidateViews();
-		scoreTxt.setText("Score: "+myGame.getScore());
+		scoreTxt.setText("Score:"+myGame.getScore());
 	
 		
 		gridView.setOnItemClickListener(new OnItemClickListener() {
