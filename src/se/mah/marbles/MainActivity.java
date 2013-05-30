@@ -198,6 +198,7 @@ public class MainActivity extends Activity {
     
 	public void shuffleClick(View v) {
 		
+    Effects.getInstance().playSound(Effects.SOUND_7);
 	randomList.clear();
 	randomList = myCards.getMycards("simple");
 	myImageAdapter.notifyDataSetChanged();
