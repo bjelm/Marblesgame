@@ -23,7 +23,7 @@ public class HighScore extends Activity{
 	private EditText scoreinput;
 	private ArrayList<Person> scoreList;
 	private int mPoints;
-    
+    Boolean bajs = false;
 	
 	
 	@Override
@@ -67,8 +67,11 @@ public class HighScore extends Activity{
 		submit= (Button) findViewById(R.id.restart);
 		updateScoreList();	//Uppdatera visning.
 		
-        mPoints = getIntent().getExtras().getInt("score");
 		
+        mPoints = getIntent().getExtras().getInt("score");
+		bajs = getIntent().getExtras().getBoolean("sorry");
+        if (bajs == false){
+        
         if (mPoints > scoreList.get(9).getPoints()){
 		Intent j = new Intent(this, NameInput.class);
 		j.putExtra("points", mPoints);
@@ -77,6 +80,7 @@ public class HighScore extends Activity{
 			Intent j = new Intent(this, Sorry.class);
 			startActivity(j);
 		}
+        }
 	}
 
 	@Override

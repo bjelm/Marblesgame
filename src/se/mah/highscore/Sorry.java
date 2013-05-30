@@ -3,6 +3,7 @@ package se.mah.highscore;
 
 
 
+import se.mah.marbles.MainActivity;
 import se.mah.marbles.R;
 import android.app.Activity;
 import android.content.Intent;
@@ -32,6 +33,7 @@ public class Sorry extends Activity {
 }
 	public void start (View v){
 		Intent i = new Intent(this, HighScore.class);
+		i.putExtra("sorry", true);
 		startActivity(i);
 		finish();
 	
