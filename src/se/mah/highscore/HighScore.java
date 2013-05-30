@@ -69,9 +69,14 @@ public class HighScore extends Activity{
 		
         mPoints = getIntent().getExtras().getInt("score");
 		
+        if (mPoints > scoreList.get(9).getPoints()){
 		Intent j = new Intent(this, NameInput.class);
 		j.putExtra("points", mPoints);
 		startActivityForResult(j, 0);  
+        }else{
+			Intent j = new Intent(this, Sorry.class);
+			startActivity(j);
+		}
 	}
 
 	@Override
@@ -87,17 +92,16 @@ public class HighScore extends Activity{
 		
 		String s = data.getExtras().getString("name");
 
-	    if (mPoints >= scoreList.get(9).getPoints()){
+	    if (mPoints > scoreList.get(9).getPoints()){
 
         Person p = new Person(s, "A" +mPoints);
 		p.addPoints(mPoints);
+		
 		scoreList.add(p);
 		updateScoreList();
-	
-	    }else{
-			Intent j = new Intent(this, Sorry.class);
-			startActivity(j);
-		}
+		scoreList.remove(10);
+		
+	    }
 	}
 		
 	
@@ -116,16 +120,16 @@ public class HighScore extends Activity{
 		T9.setText("9. "+ scoreList.get(8).getFirstname());
 		T10.setText("10. "+scoreList.get(9).getFirstname());
 		
-		P1.setText("Poäng: "+scoreList.get(0).getPoints());
-		P2.setText("Poäng: "+scoreList.get(1).getPoints());
-		P3.setText("Poäng: "+scoreList.get(2).getPoints());
-		P4.setText("Poäng: "+scoreList.get(3).getPoints());
-		P5.setText("Poäng: "+scoreList.get(4).getPoints());
-		P6.setText("Poäng: "+scoreList.get(5).getPoints());
-		P7.setText("Poäng: "+scoreList.get(6).getPoints());
-		P8.setText("Poäng: "+scoreList.get(7).getPoints());
-		P9.setText("Poäng: "+scoreList.get(8).getPoints());
-		P10.setText("Poäng: "+scoreList.get(9).getPoints());
+		P1.setText("Po‰ng: "+scoreList.get(0).getPoints());
+		P2.setText("Po‰ng: "+scoreList.get(1).getPoints());
+		P3.setText("Po‰ng: "+scoreList.get(2).getPoints());
+		P4.setText("Po‰ng: "+scoreList.get(3).getPoints());
+		P5.setText("Po‰ng: "+scoreList.get(4).getPoints());
+		P6.setText("Po‰ng: "+scoreList.get(5).getPoints());
+		P7.setText("Po‰ng: "+scoreList.get(6).getPoints());
+		P8.setText("Po‰ng: "+scoreList.get(7).getPoints());
+		P9.setText("Po‰ng: "+scoreList.get(8).getPoints());
+		P10.setText("Po‰ng: "+scoreList.get(9).getPoints());
 	
 				
 				
