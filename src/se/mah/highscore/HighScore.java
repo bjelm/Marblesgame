@@ -70,6 +70,7 @@ public class HighScore extends Activity{
         mPoints = getIntent().getExtras().getInt("score");
 		
 		Intent j = new Intent(this, NameInput.class);
+		j.putExtra("points", mPoints);
 		startActivityForResult(j, 0);  
 	}
 

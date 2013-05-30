@@ -28,11 +28,12 @@ public class NameInput extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.nameinput);
 		
+		int points = getIntent().getExtras().getInt("points");
 		Submit = (ImageButton) findViewById(R.id.restart);
 		inputName= (EditText)findViewById(R.id.namn);
 		inputName.setText(" ");
 		score= (TextView) findViewById(R.id.congratz);
-		score.setText("Congratulations you scored:" +" blablabla" + " points. Enter your name below!");
+		score.setText("Congratulations you scored: " + points + " points. Enter your name below!");
 		
 			
 	
