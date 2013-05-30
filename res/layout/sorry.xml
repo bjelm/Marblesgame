@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/blureeeee" >
+    android:background="@drawable/blureeeee"
+    android:visibility="visible" >
 
     <TextView
         android:id="@+id/firstTxt"
@@ -15,16 +16,13 @@
         android:textSize="20sp"
         android:layout_marginTop="300dp" />
 
-  
-
     <ImageButton
-           android:id="@+id/Restart"
-		android:layout_width="140dp"
-        android:layout_height="70dp"
-        android:layout_below="@+id/firstTxt"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:id="@+id/Restart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
         android:onClick="start"
-        android:src="@drawable/restart" />
+        android:src="@drawable/tom" />
 
 </RelativeLayout>
