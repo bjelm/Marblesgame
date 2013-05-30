@@ -3,7 +3,7 @@
     android:id="@+id/TableLayout1"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/fintooooo"
+    android:background="@drawable/newhighscore"
     android:stretchColumns="0,1"
     android:paddingLeft="30dp"
     android:paddingRight="30dp"
