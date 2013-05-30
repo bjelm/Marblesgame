@@ -46,6 +46,7 @@ public class MainActivity extends Activity {
 
 	private Animation anim;
 	private Animation anim_nopar;
+	private Animation anim_shuffle;
 	private GridView gridView;
 	private ImageAdapter myImageAdapter;	
 	private CheckableImageView cv;
@@ -58,13 +59,16 @@ public class MainActivity extends Activity {
 	private Cardcollection myCards = new Cardcollection();
 	private Game myGame = new Game("simple");
 	
+	
+	private boolean shuffleTest=false;
+	
 	// Saker till tidsräkningen
 	ProgressBar mProgressBar;
 	CountDownTimer mCountDownTimer;
 	
 	
-	 int tidsint = 30;
-	 int time= 30000;
+	 int tidsint = 60;
+	 int time= 60000;
 	 int sec = 1000;
 	 
 	 
@@ -98,9 +102,14 @@ public class MainActivity extends Activity {
 		scoreTxt = (TextView) findViewById(R.id.scoreview);
 		anim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.myanim);
 		anim_nopar = AnimationUtils.loadAnimation(MainActivity.this, R.anim.noparanim);
+		anim_shuffle=AnimationUtils.loadAnimation(this,R.anim.rotateanim);
+		
 		Effects.getInstance().init(this);
 		gridView = (GridView) findViewById(R.id.gridview);
 		myImageAdapter=new ImageAdapter(this);
+		
+		
+		
 		myImageAdapter.notifyDataSetChanged();
 		gridView.setAdapter(myImageAdapter);
 		gridView.invalidateViews();
@@ -172,7 +181,7 @@ public class MainActivity extends Activity {
 
 			    	 }
 			    	 
-			    	 
+			    	 shuffleTest=false;
 			    	 mChecked=false;
 			    	 clicked=false;
                  
@@ -198,12 +207,15 @@ public class MainActivity extends Activity {
     
 	public void shuffleClick(View v) {
 		
-    Effects.getInstance().playSound(Effects.SOUND_7);
+
+
+Effects.getInstance().playSound(Effects.SOUND_7);
 	randomList.clear();
 	randomList = myCards.getMycards("simple");
+	//myImageAdapter.imageView.startAnimation(anim_shuffle);
+	shuffleTest=true;
 	myImageAdapter.notifyDataSetChanged();
 	
-
 
 	}
 	
@@ -258,10 +270,11 @@ public class MainActivity extends Activity {
 		
 			
 			 imageView.setImageResource(randomList.get(position).getPicture());
-		
-		
 			
-		
+		if(shuffleTest == true){
+			 imageView.startAnimation(anim_shuffle);
+			
+		}
            
 			return imageView;
 		}
