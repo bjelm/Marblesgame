@@ -4,7 +4,6 @@ package se.mah.highscore;
 import java.util.ArrayList;
 import java.util.Collections;
 
-
 import se.mah.marbles.R;
 
 import android.os.Bundle;
@@ -16,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class HighScore extends Activity{
 	private TextView T1, T2, T3, T4, T5, T6, T7, T8, T9, T10,P1,P2,P3,P4,P5,P6,P7,P8,P9,P10, sorry;
@@ -23,7 +23,28 @@ public class HighScore extends Activity{
 	private EditText scoreinput;
 	private ArrayList<Person> scoreList;
 	private int mPoints;
-    Boolean bajs = false;
+    Boolean checkIfStarted = false;
+    
+    
+    
+    /*
+     
+    //Skapa highscore av klassen HighScoreScores 
+	HighScoreScores highscore = new HighScoreScores(this); //"this" is the Context
+
+	//LŠgg till person i highscores
+	highscore.addScore(person, person_score);
+	
+	//Demo av hur man fŒr ut data frŒn highscores
+	if (highscore.inHighscore(1000)){
+	
+		Toast.makeText(this, "Name of position 1: "+highscore.getName(1),Toast.LENGTH_SHORT).show();
+		
+		Toast.makeText(this, "Name of score 1000: "+highscore.getScore(1),Toast.LENGTH_SHORT).show();
+
+	}
+		
+     */
 	
 	
 	@Override
@@ -69,8 +90,8 @@ public class HighScore extends Activity{
 		
 		
         mPoints = getIntent().getExtras().getInt("score");
-		bajs = getIntent().getExtras().getBoolean("sorry");
-        if (bajs == false){
+		checkIfStarted = getIntent().getExtras().getBoolean("sorry");
+        if (checkIfStarted == false){
         
         if (mPoints > scoreList.get(9).getPoints()){
 		Intent j = new Intent(this, NameInput.class);
