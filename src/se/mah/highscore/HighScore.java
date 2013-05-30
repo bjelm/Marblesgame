@@ -21,48 +21,22 @@ public class HighScore extends Activity{
 	private TextView T1, T2, T3, T4, T5, T6, T7, T8, T9, T10,P1,P2,P3,P4,P5,P6,P7,P8,P9,P10, sorry;
 	private Button submit;
 	private EditText scoreinput;
-	private ArrayList<Person> scoreList;
+	//private ArrayList<Person> scoreList;
 	private int mPoints;
     Boolean checkIfStarted = false;
     
-    
-    
-    /*
-     
     //Skapa highscore av klassen HighScoreScores 
-	HighScoreScores highscore = new HighScoreScores(this); //"this" is the Context
+    HighScoreScores highscore;
 
-	//Lägg till person i highscores
-	highscore.addScore(person, person_score);
-	
-	//Demo av hur man får ut data från highscores
-	if (highscore.inHighscore(1000)){
-	
-		Toast.makeText(this, "Name of position 1: "+highscore.getName(1),Toast.LENGTH_SHORT).show();
-		
-		Toast.makeText(this, "Name of score 1000: "+highscore.getScore(1),Toast.LENGTH_SHORT).show();
-
-	}
-		
-     */
-	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.highscore_main);		
-		 scoreList = new ArrayList<Person>();// Skapa listan samt stoppa in lite folk
-		 scoreList.add(new Person("Peter","Pan"));
-		 scoreList.add(new Person("Peter","Pin"));
-		 scoreList.add(new Person("Per","Gurka"));
-		 scoreList.add(new Person("Per","Skal"));
-		 scoreList.add(new Person("Per","oPÂl"));
-		 scoreList.add(new Person("Per","L‰rka"));
-		 scoreList.add(new Person("Pelle","Erˆvrare"));
-		 scoreList.add(new Person("Perla","Po"));
-		 scoreList.add(new Person("Kalle", "Av"));
-		 scoreList.add(new Person("Perka", "Lerka"));
 		
+		highscore = new HighScoreScores(HighScore.this); //"this" is the Context
+
+
 		T1= (TextView) findViewById(R.id.firstTxt);
 		T2= (TextView) findViewById(R.id.secondTxt);
 		T3= (TextView) findViewById(R.id.thirdTxt);
@@ -84,24 +58,38 @@ public class HighScore extends Activity{
 		P8=(TextView) findViewById(R.id.eighthPts);
 		P9=(TextView) findViewById(R.id.ninthPts);
 		P10=(TextView) findViewById(R.id.tenthPts);
+		
 		scoreinput= (EditText) findViewById(R.id.namn);
 		submit= (Button) findViewById(R.id.restart);
-		updateScoreList();	//Uppdatera visning.
-		
+
 		
         mPoints = getIntent().getExtras().getInt("score");
+
+        
 		checkIfStarted = getIntent().getExtras().getBoolean("sorry");
+
+		Log.i("HIGHSCOREscoreonCreate", "score "+mPoints);
+		updateScoreList();
+		
         if (checkIfStarted == false){
         
-        if (mPoints > scoreList.get(9).getPoints()){
-		Intent j = new Intent(this, NameInput.class);
-		j.putExtra("points", mPoints);
-		startActivityForResult(j, 0);  
-        }else{
-			Intent j = new Intent(this, Sorry.class);
-			startActivity(j);
-		}
+	        if (highscore.inHighscore(mPoints)){
+
+	        	Log.i("HIGHSCORE", "Kör detta intent "+mPoints);
+
+	        	Intent j = new Intent(this, NameInput.class);
+	        	j.putExtra("points", mPoints);
+	        	startActivityForResult(j, 0); 
+				
+	        }else{
+	    		Log.i("HIGHSCOREscore", "score "+mPoints);
+				Intent j = new Intent(this, Sorry.class);
+				startActivity(j);
+				
+			}
+	        
         }
+        
 	}
 
 	@Override
@@ -116,50 +104,52 @@ public class HighScore extends Activity{
 			// TODO Auto-generated method stub
 		
 		String s = data.getExtras().getString("name");
-
-	    if (mPoints > scoreList.get(9).getPoints()){
-
-        Person p = new Person(s, "A" +mPoints);
-		p.addPoints(mPoints);
 		
-		scoreList.add(p);
-		updateScoreList();
-		scoreList.remove(10);
+		Log.i("HIGHSCOREnamn", "namn "+s);
+		Log.i("HIGHSCOREscore", "score "+mPoints);
 		
+	    if (highscore.addScore(s,mPoints)){
+	    	
+	    	Log.i("HIGHSCOREexists", "nya points "+mPoints);
+	    	Log.i("HIGHSCOREnamn", "namn "+s);
+
+	    }else{
+	    	Log.i("HIGHSCORE", "finns "+mPoints);
+	    	Log.i("HIGHSCOREnamn", "namn "+s);
+	    
 	    }
+	 
+	    updateScoreList();
 	}
 		
 	
 	//Uppdaterar listan och skriver ut namnen på de som "platsar"
-	public void updateScoreList(){
+		public void updateScoreList(){
 		
-		Collections.sort(scoreList);
-		T1.setText("1. "+ scoreList.get(0).getFirstname());
-		T2.setText("2. "+ scoreList.get(1).getFirstname());
-		T3.setText("3. "+ scoreList.get(2).getFirstname());
-		T4.setText("4. "+ scoreList.get(3).getFirstname());
-		T5.setText("5. "+ scoreList.get(4).getFirstname());
-		T6.setText("6. "+ scoreList.get(5).getFirstname());
-		T7.setText("7. "+ scoreList.get(6).getFirstname());
-		T8.setText("8. "+ scoreList.get(7).getFirstname());
-		T9.setText("9. "+ scoreList.get(8).getFirstname());
-		T10.setText("10. "+scoreList.get(9).getFirstname());
+		Log.i("HIGHSCOREupdate", "uppdaterar highscore, finns 1000 i highscore: "+highscore.inHighscore(1000));
 		
-		P1.setText("Po‰ng: "+scoreList.get(0).getPoints());
-		P2.setText("Po‰ng: "+scoreList.get(1).getPoints());
-		P3.setText("Po‰ng: "+scoreList.get(2).getPoints());
-		P4.setText("Po‰ng: "+scoreList.get(3).getPoints());
-		P5.setText("Po‰ng: "+scoreList.get(4).getPoints());
-		P6.setText("Po‰ng: "+scoreList.get(5).getPoints());
-		P7.setText("Po‰ng: "+scoreList.get(6).getPoints());
-		P8.setText("Po‰ng: "+scoreList.get(7).getPoints());
-		P9.setText("Po‰ng: "+scoreList.get(8).getPoints());
-		P10.setText("Po‰ng: "+scoreList.get(9).getPoints());
-	
-				
-				
+		T1.setText("1. "+ highscore.getName(0));
+		T2.setText("2. "+ highscore.getName(1));
+		T3.setText("3. "+ highscore.getName(2));
+		T4.setText("4. "+ highscore.getName(3));
+		T5.setText("5. "+ highscore.getName(4));
+		T6.setText("6. "+ highscore.getName(5));
+		T7.setText("7. "+ highscore.getName(6));
+		T8.setText("8. "+ highscore.getName(7));
+		T9.setText("9. "+ highscore.getName(8));
+		T10.setText("10. "+highscore.getName(9));
 		
-	
+		P1.setText("Poäng: "+highscore.getScore(0));
+		P2.setText("Poäng: "+highscore.getScore(1));
+		P3.setText("Poäng: "+highscore.getScore(2));
+		P4.setText("Poäng: "+highscore.getScore(3));
+		P5.setText("Poäng: "+highscore.getScore(4));
+		P6.setText("Poäng: "+highscore.getScore(5));
+		P7.setText("Poäng: "+highscore.getScore(6));
+		P8.setText("Poäng: "+highscore.getScore(7));
+		P9.setText("Poäng: "+highscore.getScore(8));
+		P10.setText("Poäng: "+highscore.getScore(9));
+
 		}
 
  }
