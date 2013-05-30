@@ -28,7 +28,7 @@ public class Sorry extends Activity {
 		Sorry = (TextView) findViewById(R.id.firstTxt);
 		
 		//String s2= getIntent().getExtras().getString("Sorry");
-		Sorry.setText("Sorry your score wasn't enough to get a place on our top 10. Would you like to try again?");
+		Sorry.setText("Tyvärr, du fick inte tillräckligt med poäng för topplistan!");
 		
 }
 	public void start (View v){
