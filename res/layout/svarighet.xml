@@ -24,7 +24,7 @@
             android:id="@+id/medium"
             android:layout_width="150dp"
             android:layout_height="100dp"
-            android:button="@drawable/radio"
+            android:button="@drawable/mellan"
             android:scaleType="fitXY"
             android:text="Medel" />
 
@@ -32,7 +32,7 @@
             android:id="@+id/hard"
             android:layout_width="150dp"
             android:layout_height="100dp"
-            android:button="@drawable/radio"
+            android:button="@drawable/hard"
             android:scaleType="fitXY"
             android:text="Svårt" />
     </RadioGroup>
