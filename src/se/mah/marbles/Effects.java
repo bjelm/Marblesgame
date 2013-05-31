@@ -23,6 +23,7 @@ public class Effects {
 	public static final int SOUND_5 = 5;
 	public static final int SOUND_6 = 6;
 	public static final int SOUND_7 = 7;
+	public static final int SOUND_8 = 8;
 
 	private Effects() {
 		
@@ -57,6 +58,7 @@ public class Effects {
 	soundPoolMap.put(SOUND_5, soundPool.load(context, R.raw.kidscheering, 5));
 	soundPoolMap.put(SOUND_6, soundPool.load(context, R.raw.nope, 6));
 	soundPoolMap.put(SOUND_7, soundPool.load(context, R.raw.wood, 7));
+	soundPoolMap.put(SOUND_7, soundPool.load(context, R.raw.femhundrapoints, 8));
 
 	AudioManager audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
 	volume = audioManager.getStreamVolume(AudioManager.STREAM_SYSTEM);

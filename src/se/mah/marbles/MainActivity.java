@@ -193,7 +193,7 @@ public class MainActivity extends Activity {
 				    	 cv.startAnimation(anim);
 				    	 cv_first.startAnimation(anim);
 				    	 
-				    	 Effects.getInstance().playSound(Effects.SOUND_5);
+				    	 Effects.getInstance().playSound(Effects.SOUND_8);
 				    	 myGame.addScore(500);
 				    	 scoreTxt.setText("Score: "+myGame.getScore());
 				    	 AddTime();
