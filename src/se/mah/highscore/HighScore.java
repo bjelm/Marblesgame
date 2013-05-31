@@ -13,11 +13,8 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class HighScore extends Activity{
 	private TextView T1, T2, T3, T4, T5, T6, T7, T8, T9, T10,P1,P2,P3,P4,P5,P6,P7,P8,P9,P10, sorry;
@@ -159,10 +156,20 @@ public class HighScore extends Activity{
 
 		}
 		
+		//knappmetoder
 		public void restart (View v){
 			Intent i = new Intent(this, MainActivity.class);
 			startActivity(i);
 			finish();
 		}
+		public void backtostart (View v){
+			/* 
+			//lägg in rätt klassnamn, för att sedan starta start-menyn
+			Intent i = new Intent(this, MainActivity.class);
+			startActivity(i);
+			finish();
+			*/
+		}
+		
 
  }
