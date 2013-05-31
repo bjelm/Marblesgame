@@ -345,6 +345,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="0.48"
+        android:background="@null"
         android:onClick="restart"
         android:src="@drawable/restart" />
 
@@ -353,6 +354,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="backtostart"
+        android:background="@null"
         android:src="@drawable/ok" />
 
 </TableLayout>

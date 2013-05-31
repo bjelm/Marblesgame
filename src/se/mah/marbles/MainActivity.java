@@ -168,7 +168,7 @@ public class MainActivity extends Activity {
 			    	 if (firstClick == secondClick){
 			    		 cv.startAnimation(anim_nopar);
 				    	 cv_first.startAnimation(anim_nopar);
-				    	 RemoveTime();
+				    	 RemoveTime(5000);
 				    	 Effects.getInstance().playSound(Effects.SOUND_6);
 			    	 }
 			    	 
@@ -184,7 +184,7 @@ public class MainActivity extends Activity {
 				    	 Effects.getInstance().playSound(Effects.SOUND_5);
 				    	 myGame.addScore(1000);
 				    	 scoreTxt.setText("Score: "+myGame.getScore());
-				    	 AddTime();
+				    	 AddTime(10000);
 			    	 }
 			    	 
 			    	 else if (randomList.get(firstClick).returnCategory() == randomList.get(secondClick).returnCategory()){			    	
@@ -197,11 +197,11 @@ public class MainActivity extends Activity {
 				    	 Effects.getInstance().playSound(Effects.SOUND_8);
 				    	 myGame.addScore(500);
 				    	 scoreTxt.setText("Score: "+myGame.getScore());
-				    	 AddTime();
+				    	 AddTime(5000);
 			    	 }
 			    	 
 			    	 else{
-			    		 RemoveTime();
+			    		 RemoveTime(5000);
 			    		 cv.startAnimation(anim_nopar);
 			    		 cv_first.startAnimation(anim_nopar);
 			    		 Effects.getInstance().playSound(Effects.SOUND_6);
@@ -408,16 +408,16 @@ Effects.getInstance().playSound(Effects.SOUND_7);
 	
 	
  // hör till tiden
-	public void AddTime(){
+	public void AddTime(int newTime){
 		myTimer.cancel();
-		time = (int)tidms +5000;
+		time = (int)tidms +newTime;
 		myTimer = new MyTimer(time, sec);
 		myTimer.start();
 	}
 	
-	public void RemoveTime(){
+	public void RemoveTime(int newTime){
 		myTimer.cancel();
-		time = (int)tidms -5000;
+		time = (int)tidms -newTime;
 		myTimer = new MyTimer(time, sec);
 		myTimer.start();
 	}
