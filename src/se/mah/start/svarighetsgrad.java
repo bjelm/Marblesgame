@@ -1,8 +1,7 @@
 package se.mah.start;
 
 
-//import se.mah.marbles.MainActivity;
-import se.mah.highscore.HighScore;
+
 import se.mah.marbles.MainActivity;
 import se.mah.marbles.R;
 import android.app.Activity;
