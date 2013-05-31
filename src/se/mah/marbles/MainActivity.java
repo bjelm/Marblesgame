@@ -170,26 +170,40 @@ public class MainActivity extends Activity {
 				    	 RemoveTime();
 				    	 Effects.getInstance().playSound(Effects.SOUND_6);
 			    	 }
-			    	
-			    	  
-			    	 else if (randomList.get(firstClick).returnCategory() == randomList.get(secondClick).returnCategory()){
-			    	
-			         randomList.set(firstClick, myCards.getMycards(myGame.getLevel()).get(randomInt()));
-			    	 randomList.set(secondClick,myCards.getMycards(myGame.getLevel()).get(randomInt()));
-			    	
-			    	 cv.startAnimation(anim);
-			    	 cv_first.startAnimation(anim);
 			    	 
-			    	 Effects.getInstance().playSound(Effects.SOUND_5);
-			    	 myGame.addScore(1000);
-			    	 scoreTxt.setText("Score: "+myGame.getScore());
-			    	 AddTime();
-			    	 }else{
+			    	 else if ((randomList.get(firstClick).returnCategory() == randomList.get(secondClick).returnCategory()) &&
+			    			 (randomList.get(firstClick).returnCategoryTwo() != randomList.get(secondClick).returnCategoryTwo())){
+			    		 
+				         randomList.set(firstClick, myCards.getMycards(myGame.getLevel()).get(randomInt()));
+				    	 randomList.set(secondClick,myCards.getMycards(myGame.getLevel()).get(randomInt()));
+				    	
+				    	 cv.startAnimation(anim);
+				    	 cv_first.startAnimation(anim);
+				    	 
+				    	 Effects.getInstance().playSound(Effects.SOUND_5);
+				    	 myGame.addScore(1000);
+				    	 scoreTxt.setText("Score: "+myGame.getScore());
+				    	 AddTime();
+			    	 }
+			    	 
+			    	 else if (randomList.get(firstClick).returnCategory() == randomList.get(secondClick).returnCategory()){			    	
+				         randomList.set(firstClick, myCards.getMycards(myGame.getLevel()).get(randomInt()));
+				    	 randomList.set(secondClick,myCards.getMycards(myGame.getLevel()).get(randomInt()));
+				    	
+				    	 cv.startAnimation(anim);
+				    	 cv_first.startAnimation(anim);
+				    	 
+				    	 Effects.getInstance().playSound(Effects.SOUND_5);
+				    	 myGame.addScore(500);
+				    	 scoreTxt.setText("Score: "+myGame.getScore());
+				    	 AddTime();
+			    	 }
+			    	 
+			    	 else{
 			    		 RemoveTime();
-			    	 cv.startAnimation(anim_nopar);
-			    	 cv_first.startAnimation(anim_nopar);
-			    	 
-			    	 Effects.getInstance().playSound(Effects.SOUND_6);
+			    		 cv.startAnimation(anim_nopar);
+			    		 cv_first.startAnimation(anim_nopar);
+			    		 Effects.getInstance().playSound(Effects.SOUND_6);
 
 			    	 }
 			    	 
