@@ -13,14 +13,11 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 
 public class HighScore extends Activity{
 	private TextView T1, T2, T3, T4, T5, T6, T7, T8, T9, T10,P1,P2,P3,P4,P5,P6,P7,P8,P9,P10, sorry;
-	//private Button submit;
-	private EditText scoreinput;
-	//private ArrayList<Person> scoreList;
+
 	private int mPoints;
     Boolean checkIfStarted = false;
     
@@ -62,13 +59,9 @@ public class HighScore extends Activity{
 		P9=(TextView) findViewById(R.id.ninthPts);
 		P10=(TextView) findViewById(R.id.tenthPts);
 		
-		scoreinput= (EditText) findViewById(R.id.namn);
-		//submit= (Button) findViewById(R.id.restart);
 
-		
         mPoints = getIntent().getExtras().getInt("score");
 
-        
 		checkIfStarted = getIntent().getExtras().getBoolean("sorry");
 
 		Log.i("HIGHSCOREscoreonCreate", "score "+mPoints);
@@ -89,11 +82,8 @@ public class HighScore extends Activity{
 				Intent j = new Intent(this, Sorry.class);
 				j.putExtra("points", mPoints);
 				startActivity(j);
-				
 			}
-	        
-        }
-        
+        } 
 	}
 
 	@Override
