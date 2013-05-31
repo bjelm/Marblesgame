@@ -26,6 +26,7 @@
         android:layout_width="140dp"
         android:layout_height="80dp"
         android:layout_below="@+id/namn"
+        android:background="@null"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:onClick="submit"
