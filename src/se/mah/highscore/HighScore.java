@@ -4,6 +4,7 @@ package se.mah.highscore;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import se.mah.marbles.MainActivity;
 import se.mah.marbles.R;
 
 import android.os.Bundle;
@@ -12,14 +13,15 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
-import android.widget.Button;
+import android.view.View.OnClickListener;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class HighScore extends Activity{
 	private TextView T1, T2, T3, T4, T5, T6, T7, T8, T9, T10,P1,P2,P3,P4,P5,P6,P7,P8,P9,P10, sorry;
-	private Button submit;
+	//private Button submit;
 	private EditText scoreinput;
 	//private ArrayList<Person> scoreList;
 	private int mPoints;
@@ -33,6 +35,10 @@ public class HighScore extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.highscore_main);		
+		
+
+		
+		
 		
 		highscore = new HighScoreScores(HighScore.this); //"this" is the Context
 
@@ -60,7 +66,7 @@ public class HighScore extends Activity{
 		P10=(TextView) findViewById(R.id.tenthPts);
 		
 		scoreinput= (EditText) findViewById(R.id.namn);
-		submit= (Button) findViewById(R.id.restart);
+		//submit= (Button) findViewById(R.id.restart);
 
 		
         mPoints = getIntent().getExtras().getInt("score");
@@ -151,6 +157,12 @@ public class HighScore extends Activity{
 		P9.setText("Poäng: "+highscore.getScore(8));
 		P10.setText("Poäng: "+highscore.getScore(9));
 
+		}
+		
+		public void restart (View v){
+			Intent i = new Intent(this, MainActivity.class);
+			startActivity(i);
+			finish();
 		}
 
  }
