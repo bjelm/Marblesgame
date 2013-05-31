@@ -4,23 +4,22 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/newhighscore"
-    android:stretchColumns="0,1"
     android:paddingLeft="30dp"
     android:paddingRight="30dp"
+    android:stretchColumns="0,1"
     tools:context=".HighScore" >
 
     <TableRow
         android:id="@+id/tableRow1"
-        android:layout_marginTop="155dp"
         android:layout_width="fill_parent"
-        android:background="@drawable/rowbackground"
-        android:layout_height="42dp" >
+        android:layout_height="42dp"
+        android:layout_marginTop="155dp"
+        android:background="@drawable/rowbackground" >
 
         <TextView
             android:id="@+id/firstTxt"
             android:layout_width="3dip"
             android:layout_height="42dp"
-            
             android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
@@ -33,29 +32,26 @@
             android:id="@+id/firstPts"
             android:layout_width="3dip"
             android:layout_height="42dp"
-            
-            android:paddingBottom="5dp"
             android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:gravity="left"
             android:textSize="20sp" />
-
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="match_parent"
-        android:background="@drawable/rowbackground"
-        android:layout_height="42dp" >
+        android:layout_height="42dp"
+        android:background="@drawable/rowbackground" >
 
         <TextView
             android:id="@+id/secondTxt"
             android:layout_width="3dip"
             android:layout_height="42dp"
             android:layout_marginTop="5dp"
-            
             android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
@@ -66,30 +62,27 @@
             android:id="@+id/secondPts"
             android:layout_width="3dip"
             android:layout_height="42dp"
-            
-            android:paddingBottom="5dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
+            android:gravity="left"
+            android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:gravity="left"
             android:textSize="20sp" />
-
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow3"
-        android:background="@drawable/rowbackground"
         android:layout_width="match_parent"
-        android:layout_height="42dp" >
+        android:layout_height="42dp"
+        android:background="@drawable/rowbackground" >
 
         <TextView
             android:id="@+id/thirdTxt"
             android:layout_width="3dip"
             android:layout_height="42dp"
             android:layout_marginTop="5dp"
-            
             android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
@@ -100,30 +93,27 @@
             android:id="@+id/thirdPts"
             android:layout_width="3dip"
             android:layout_height="42dp"
-            
-            android:paddingBottom="5dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
+            android:gravity="left"
+            android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:gravity="left"
-            android:textSize="20sp"/>
-
+            android:textSize="20sp" />
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow4"
-        android:background="@drawable/rowbackground"
         android:layout_width="match_parent"
-        android:layout_height="42dp" >
+        android:layout_height="42dp"
+        android:background="@drawable/rowbackground" >
 
         <TextView
             android:id="@+id/fourthTxt"
             android:layout_width="3dip"
             android:layout_height="42dp"
             android:layout_marginTop="5dp"
-            
             android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
@@ -134,30 +124,27 @@
             android:id="@+id/fourthPts"
             android:layout_width="3dip"
             android:layout_height="42dp"
-            
-            android:paddingBottom="5dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
+            android:gravity="left"
+            android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:gravity="left"
-            android:textSize="20sp"/>
-
+            android:textSize="20sp" />
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow5"
-        android:background="@drawable/rowbackground"
         android:layout_width="match_parent"
-        android:layout_height="42dp">
+        android:layout_height="42dp"
+        android:background="@drawable/rowbackground" >
 
         <TextView
             android:id="@+id/fifthTxt"
             android:layout_width="3dip"
             android:layout_height="42dp"
             android:layout_marginTop="5dp"
-            
             android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
@@ -168,30 +155,27 @@
             android:id="@+id/fifthPts"
             android:layout_width="3dip"
             android:layout_height="42dp"
-            
-            android:paddingBottom="5dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
+            android:gravity="left"
+            android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:gravity="left"
             android:textSize="20sp" />
-
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow6"
-        android:background="@drawable/rowbackground"
         android:layout_width="match_parent"
-        android:layout_height="42dp" >
+        android:layout_height="42dp"
+        android:background="@drawable/rowbackground" >
 
         <TextView
             android:id="@+id/sixthTxt"
             android:layout_width="3dip"
             android:layout_height="42dp"
             android:layout_marginTop="5dp"
-            
             android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
@@ -202,30 +186,27 @@
             android:id="@+id/sixthPts"
             android:layout_width="3dip"
             android:layout_height="42dp"
-            
-            android:paddingBottom="5dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
+            android:gravity="left"
+            android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:gravity="left"
             android:textSize="20sp" />
-
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow7"
-        android:background="@drawable/rowbackground"
         android:layout_width="match_parent"
-        android:layout_height="42dp" >
+        android:layout_height="42dp"
+        android:background="@drawable/rowbackground" >
 
         <TextView
             android:id="@+id/seventhTxt"
             android:layout_width="3dip"
             android:layout_height="42dp"
             android:layout_marginTop="5dp"
-            
             android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
@@ -236,30 +217,27 @@
             android:id="@+id/seventhPts"
             android:layout_width="3dip"
             android:layout_height="42dp"
-            
-            android:paddingBottom="5dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
+            android:gravity="left"
+            android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:gravity="left"
-            android:textSize="20sp"/>
-
+            android:textSize="20sp" />
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow8"
-        android:background="@drawable/rowbackground"
         android:layout_width="match_parent"
-        android:layout_height="42dp" >
+        android:layout_height="42dp"
+        android:background="@drawable/rowbackground" >
 
         <TextView
             android:id="@+id/eighthTxt"
             android:layout_width="3dip"
             android:layout_height="42dp"
             android:layout_marginTop="5dp"
-            
             android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
@@ -270,30 +248,27 @@
             android:id="@+id/eighthPts"
             android:layout_width="3dip"
             android:layout_height="42dp"
-            
-            android:paddingBottom="5dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
+            android:gravity="left"
+            android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:gravity="left"
             android:textSize="20sp" />
-
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow9"
-        android:background="@drawable/rowbackground"
         android:layout_width="match_parent"
-        android:layout_height="42dp" >
+        android:layout_height="42dp"
+        android:background="@drawable/rowbackground" >
 
         <TextView
             android:id="@+id/ninthTxt"
             android:layout_width="3dip"
             android:layout_height="42dp"
             android:layout_marginTop="5dp"
-            
             android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
@@ -304,30 +279,27 @@
             android:id="@+id/ninthPts"
             android:layout_width="3dip"
             android:layout_height="42dp"
-            
-            android:paddingBottom="5dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
+            android:gravity="left"
+            android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:gravity="left"
-            android:textSize="20sp"/>
-
+            android:textSize="20sp" />
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow10"
-        android:background="@drawable/rowbackground"
         android:layout_width="match_parent"
-        android:layout_height="42dp" >
+        android:layout_height="42dp"
+        android:background="@drawable/rowbackground" >
 
         <TextView
             android:id="@+id/tenthTxt"
             android:layout_width="3dip"
             android:layout_height="42dp"
             android:layout_marginTop="5dp"
-            
             android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
@@ -338,18 +310,22 @@
             android:id="@+id/tenthPts"
             android:layout_width="3dip"
             android:layout_height="42dp"
-            
-            android:paddingBottom="5dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
+            android:gravity="left"
+            android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-             android:gravity="left"
             android:textSize="20sp" />
-
     </TableRow>
 
-    
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.48"
+        android:onClick="restart"
+        android:src="@drawable/restart" />
 
 </TableLayout>
