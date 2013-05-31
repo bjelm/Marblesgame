@@ -26,11 +26,18 @@
         </activity>
         
         
-        <activity android:name="se.mah.highscore.HighScore"></activity>
+        <activity
+            android:name="se.mah.highscore.HighScore"
+            android:screenOrientation="portrait"
+           > </activity>
          
-        <activity android:name="se.mah.highscore.NameInput"></activity>
+        <activity 
+            android:name="se.mah.highscore.NameInput"
+            android:screenOrientation="portrait"></activity>
           
-          <activity android:name="se.mah.highscore.Sorry"></activity>
+          <activity 
+              android:name="se.mah.highscore.Sorry"
+              android:screenOrientation="portrait"></activity>
         
    
         
