@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nyabak"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/svarighet"
+        android:layout_width="100dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp" >
+
+        <RadioButton
+            android:id="@+id/easy"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:button="@drawable/radio"
+            android:checked="true"
+            android:scaleType="fitXY"
+            android:text="Lätt" />
+
+        <RadioButton
+            android:id="@+id/medium"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:button="@drawable/radio"
+            android:scaleType="fitXY"
+            android:text="Medel" />
+
+        <RadioButton
+            android:id="@+id/hard"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:button="@drawable/radio"
+            android:scaleType="fitXY"
+            android:text="Svårt" />
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/starta"
+        android:layout_width="150dip"
+        android:layout_height="60dip"
+        android:layout_gravity="bottom|center"
+        android:onClick="play"
+        android:scaleType="fitXY"
+        android:src="@drawable/spelaknapp"
+        android:text="Spela" />
+
+</LinearLayout>

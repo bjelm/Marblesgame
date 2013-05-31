@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start"
+    android:ignoreGravity="@drawable/spelaknapp"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Start" >
+
+    <ImageButton
+        android:id="@+id/mute"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="72dp"
+        android:background="@drawable/bambunmute" />
+
+    <ImageButton
+        android:id="@+id/spela"
+        android:layout_width="150dip"
+        android:layout_height="60dip"
+        android:layout_alignBottom="@+id/mute"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:onClick="valjsvarighet"
+        android:scaleType="fitXY"
+        android:src="@drawable/spelaknapp"
+        android:text="Spela" />
+
+</RelativeLayout>
