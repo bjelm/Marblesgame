@@ -7,6 +7,8 @@ import java.util.Random;
 
 
 
+
+
 import se.mah.highscore.HighScore;
 import se.mah.highscore.NameInput;
 
@@ -23,6 +25,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.drawable.AnimationDrawable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Menu;
@@ -95,10 +98,19 @@ public class MainActivity extends Activity {
 		mProgressBar.setProgress(0);
 		myTimer = new MyTimer(time, sec);
 		myTimer.start();
-		//
+		/////
 		
 		
 		
+        ImageView flame = (ImageView)findViewById(R.id.imageanim);
+		flame.setImageBitmap(null);
+		flame.setBackgroundResource( R.drawable.flameanim);
+		AnimationDrawable flameAnim = (AnimationDrawable) flame.getBackground();
+		
+		flameAnim.start();
+		
+		
+		/////
 		scoreTxt = (TextView) findViewById(R.id.scoreview);
 		anim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.myanim);
 		anim_nopar = AnimationUtils.loadAnimation(MainActivity.this, R.anim.noparanim);

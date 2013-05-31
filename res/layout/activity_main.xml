@@ -59,7 +59,11 @@
     
 
 
-    <ImageButton
+   <RelativeLayout 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+  
+  <ImageButton
         android:id="@+id/imagebutton1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -71,5 +75,17 @@
         android:scaleType="fitCenter"
         android:src="@drawable/button_state"
          />
+  
+    <ImageView
+        android:id="@+id/imageanim"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/imagebutton1"
+       android:layout_alignBottom="@+id/imagebutton1"
+       android:layout_alignLeft="@+id/imagebutton1"
+       android:layout_alignRight="@+id/imagebutton1"
+       android:scaleType="fitXY"
+         />
+    </RelativeLayout>
 
 </LinearLayout>
