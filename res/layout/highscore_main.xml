@@ -26,6 +26,7 @@
             android:paddingTop="10dp"
             android:text="TextView"
             android:textSize="20sp"
+            android:textColor="#000000"
             android:visibility="visible" />
 
         <TextView
@@ -38,7 +39,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000" />
     </TableRow>
 
     <TableRow
@@ -56,7 +58,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="TextView"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/secondPts"
@@ -69,7 +72,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000" />
     </TableRow>
 
     <TableRow
@@ -87,7 +91,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="TextView"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/thirdPts"
@@ -100,7 +105,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000" />
     </TableRow>
 
     <TableRow
@@ -118,7 +124,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="TextView"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/fourthPts"
@@ -131,7 +138,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000" />
     </TableRow>
 
     <TableRow
@@ -149,7 +157,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="TextView"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/fifthPts"
@@ -162,7 +171,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000" />
     </TableRow>
 
     <TableRow
@@ -180,7 +190,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="TextView"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/sixthPts"
@@ -193,7 +204,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000" />
     </TableRow>
 
     <TableRow
@@ -211,7 +223,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="TextView"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/seventhPts"
@@ -224,7 +237,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000" />
     </TableRow>
 
     <TableRow
@@ -242,7 +256,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="TextView"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/eighthPts"
@@ -255,7 +270,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000" />
     </TableRow>
 
     <TableRow
@@ -273,7 +289,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="TextView"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/ninthPts"
@@ -286,7 +303,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000" />
     </TableRow>
 
     <TableRow
@@ -304,7 +322,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="TextView"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/tenthPts"
@@ -317,7 +336,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#000000" />
     </TableRow>
 
     <ImageButton
