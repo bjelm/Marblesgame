@@ -60,7 +60,7 @@ public class MainActivity extends Activity {
 	private boolean mChecked;
     private TextView scoreTxt ;
 	private Cardcollection myCards = new Cardcollection();
-	private Game myGame = new Game("simple");
+	private Game myGame	= new Game("simple");
 	
 	
 	private boolean shuffleTest=false;
@@ -89,6 +89,7 @@ public class MainActivity extends Activity {
 		
 		setContentView(R.layout.activity_main);
 		
+	
 		//till tiden
 		myTimer = new MyTimer(50000, 1000);
 		myTimer.start();
@@ -390,7 +391,6 @@ Effects.getInstance().playSound(Effects.SOUND_7);
 	 
 		 int p =  myGame.getScore();
 		
-	     Log.i("finalscore",p+"");
          Intent i = new Intent(this,HighScore.class );
 	     i.putExtra("score",p);	
 	     startActivity(i);
