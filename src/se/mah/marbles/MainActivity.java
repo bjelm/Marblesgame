@@ -65,6 +65,7 @@ public class MainActivity extends Activity {
 	
 	private boolean shuffleTest=false;
 	
+	private AnimationDrawable  boomAnim;
 	// Saker till tidsräkningen
 	ProgressBar mProgressBar;
 	CountDownTimer mCountDownTimer;
@@ -109,6 +110,13 @@ public class MainActivity extends Activity {
 		AnimationDrawable flameAnim = (AnimationDrawable) flame.getBackground();
 		
 		flameAnim.start();
+		
+		ImageView boom = (ImageView)findViewById(R.id.imageanim2);
+		boom.setImageBitmap(null);
+		boom.setBackgroundResource( R.drawable.boomanim);
+		boomAnim = (AnimationDrawable) boom.getBackground();
+
+
 		
 		
 		/////
@@ -180,6 +188,10 @@ public class MainActivity extends Activity {
 				    	
 				    	 cv.startAnimation(anim);
 				    	 cv_first.startAnimation(anim);
+				    	 
+				    	boomAnim.stop();
+				    	boomAnim.start();
+				    	
 				    	 
 				    	 Effects.getInstance().playSound(Effects.SOUND_5);
 				    	 myGame.addScore(1000);
