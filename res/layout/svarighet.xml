@@ -10,32 +10,33 @@
         android:layout_width="100dip"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp" >
-
-        <RadioButton
-            android:id="@+id/easy"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:button="@drawable/radio"
-            android:checked="true"
-            android:scaleType="fitXY"
-            android:text="Lätt" />
-
-        <RadioButton
-            android:id="@+id/medium"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:button="@drawable/radio"
-            android:scaleType="fitXY"
-            android:text="Medel" />
-
-        <RadioButton
-            android:id="@+id/hard"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:button="@drawable/radio"
-            android:scaleType="fitXY"
-            android:text="Svårt" />
     </RadioGroup>
+
+    <RadioButton
+        android:id="@+id/medium"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:button="@drawable/radio"
+        android:gravity="center_vertical|center_horizontal|start"
+        android:scaleType="fitXY"
+        android:text="Medel" />
+
+    <RadioButton
+        android:id="@+id/hard"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:button="@drawable/radio"
+        android:scaleType="fitXY"
+        android:text="Svårt" />
+
+    <RadioButton
+        android:id="@+id/easy"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:button="@drawable/radio"
+        android:checked="true"
+        android:scaleType="fitXY"
+        android:text="Lätt" />
 
     <ImageButton
         android:id="@+id/starta"
