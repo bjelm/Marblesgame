@@ -29,6 +29,7 @@
         android:onClick="valjsvarighet"
         android:scaleType="fitXY"
         android:src="@drawable/spelaknapp"
+        android:background="@null"
         android:text="Spela" />
 
 </RelativeLayout>
