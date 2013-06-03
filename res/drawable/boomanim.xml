@@ -16,9 +16,9 @@
                         <item android:drawable="@drawable/b13" android:duration="40" />
                           <item android:drawable="@drawable/b14" android:duration="40" />
                             <item android:drawable="@drawable/b16" android:duration="40" />
-                             <item android:drawable="@drawable/b17" android:duration="40" />
-                              <item android:drawable="@drawable/b18" android:duration="40" />
-                               <item android:drawable="@drawable/b19" android:duration="40" />
-                               <item android:drawable="@drawable/b20" android:duration="40" />
-                                <item android:drawable="@drawable/b15" android:duration="40" />
+                             <item android:drawable="@drawable/b17" android:duration="50" />
+                              <item android:drawable="@drawable/b18" android:duration="60" />
+                               <item android:drawable="@drawable/b19" android:duration="70" />
+                               <item android:drawable="@drawable/b20" android:duration="80" />
+                                <item android:drawable="@drawable/b15" android:duration="90" />
 </animation-list>
