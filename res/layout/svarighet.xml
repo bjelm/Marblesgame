@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_vertical"
     android:background="@drawable/nyabak"
     android:orientation="vertical" >
 
@@ -9,34 +10,38 @@
         android:id="@+id/svarighet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center" >
+         >
    
     <RadioButton
         android:id="@+id/hard"
+        android:layout_margin="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/hardxml"
+        android:layout_gravity="center"
         android:button="@null"
-        android:gravity="center" />
+       />
 
     <RadioButton
         android:id="@+id/medium"
+        android:layout_margin="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:button="@null" 
         android:background="@drawable/mellanxml"/>
 
     <RadioButton
         android:id="@+id/easy"
+        android:layout_margin="30dp"
         android:layout_width="wrap_content"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
-         android:button="@null" 
-        android:background="@drawable/radio"
+        android:button="@null" 
+        android:background="@drawable/easyxml"
         android:checked="true" />
-
- </RadioGroup>
     
-    <ImageButton
+  <ImageButton
         android:id="@+id/starta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,7 +50,10 @@
         android:background="@null"
         android:onClick="play"
         android:scaleType="fitXY"
-        android:src="@drawable/starta"
+        android:src="@drawable/startabutton"
         android:text="Spela" />
+ </RadioGroup>
+    
+  
 
 </LinearLayout>
