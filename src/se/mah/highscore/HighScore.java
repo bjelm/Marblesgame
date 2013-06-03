@@ -6,6 +6,7 @@ import java.util.Collections;
 
 import se.mah.marbles.MainActivity;
 import se.mah.marbles.R;
+import se.mah.start.Start;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -153,13 +154,12 @@ public class HighScore extends Activity{
 			finish();
 		}
 		public void backtostart (View v){
-			/* 
+			
 			//l�gg in r�tt klassnamn, f�r att sedan starta start-menyn
-			Intent i = new Intent(this, MainActivity.class);
+			Intent i = new Intent(this, Start.class);
 			startActivity(i);
 			finish();
-			*/
+			
 		}
-		
 
  }

@@ -25,8 +25,8 @@
             android:paddingRight="10dp"
             android:paddingTop="10dp"
             android:text="TextView"
-            android:textSize="20sp"
             android:textColor="#000000"
+            android:textSize="20sp"
             android:visibility="visible" />
 
         <TextView
@@ -39,8 +39,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
     </TableRow>
 
     <TableRow
@@ -58,8 +58,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="TextView"
-            android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/secondPts"
@@ -72,8 +72,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
     </TableRow>
 
     <TableRow
@@ -91,8 +91,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="TextView"
-            android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/thirdPts"
@@ -105,8 +105,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
     </TableRow>
 
     <TableRow
@@ -124,8 +124,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="TextView"
-            android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/fourthPts"
@@ -138,8 +138,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
     </TableRow>
 
     <TableRow
@@ -157,8 +157,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="TextView"
-            android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/fifthPts"
@@ -171,8 +171,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
     </TableRow>
 
     <TableRow
@@ -190,8 +190,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="TextView"
-            android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/sixthPts"
@@ -204,8 +204,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
     </TableRow>
 
     <TableRow
@@ -223,8 +223,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="TextView"
-            android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/seventhPts"
@@ -237,8 +237,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
     </TableRow>
 
     <TableRow
@@ -256,8 +256,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="TextView"
-            android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/eighthPts"
@@ -270,8 +270,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
     </TableRow>
 
     <TableRow
@@ -289,8 +289,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="TextView"
-            android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/ninthPts"
@@ -303,8 +303,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
     </TableRow>
 
     <TableRow
@@ -322,8 +322,8 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="TextView"
-            android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tenthPts"
@@ -336,25 +336,43 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="Poäng: "
-            android:textSize="20sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
     </TableRow>
 
-    <ImageButton
-        android:id="@+id/imageButton1"
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.48"
-        android:background="@null"
-        android:onClick="restart"
-        android:src="@drawable/restart" />
+        android:layout_height="match_parent" >
 
-    <ImageButton
-        android:id="@+id/imageButton2"
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="50dp"
+            android:layout_weight="0.48"
+            android:background="@null"
+            android:onClick="restart"
+            android:src="@drawable/omstart" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="backtostart"
-        android:background="@null"
-        android:src="@drawable/ok" />
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="50dp"
+            android:background="@null"
+            android:onClick="backtostart"
+            android:src="@drawable/tillbaka" />
+
+    </RelativeLayout>
 
 </TableLayout>
