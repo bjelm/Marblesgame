@@ -231,7 +231,8 @@ public class MainActivity extends Activity {
 //					 megAnimation.start();
 			    	
 			    
-			    	
+			    	 boomAnim.stop();
+				    	boomAnim.start();
 			    	 Handler myHandler = new Handler();
 			    	 myHandler.postDelayed(myRunnable, 500);
 

@@ -80,8 +80,8 @@
   
     <ImageView
         android:id="@+id/imageanim"
-        android:layout_width="40dp"
-        android:layout_height="60dp"
+        android:layout_width="@+id/imagebutton1"
+        android:layout_height="@+id/imagebutton1"
         android:layout_alignTop="@+id/imagebutton1"
        android:layout_alignBottom="@+id/imagebutton1"
        android:layout_alignLeft="@+id/imagebutton1"
@@ -91,13 +91,14 @@
     
       <ImageView
         android:id="@+id/imageanim2"
-        android:layout_width="40dp"
-        android:layout_height="60dp"
+        android:layout_width="@+id/imagebutton1"
+        android:layout_height="@+id/imagebutton1"
         android:layout_alignTop="@+id/imagebutton1"
-       android:layout_alignBottom="@+id/imagebutton1"
+        android:layout_alignBottom="@+id/imagebutton1"
        android:layout_alignLeft="@+id/imagebutton1"
        android:layout_alignRight="@+id/imagebutton1"
        android:scaleType="fitXY"
+   
          />
     </RelativeLayout>
 

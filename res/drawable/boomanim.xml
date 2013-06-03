@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="true">
-    <item android:drawable="@drawable/b15" android:duration="40" />
-    <item android:drawable="@drawable/b1" android:duration="40" />
-      <item android:drawable="@drawable/b2" android:duration="40" />
-        <item android:drawable="@drawable/b3" android:duration="40" />
-          <item android:drawable="@drawable/b4" android:duration="40" />
-        <item android:drawable="@drawable/b5" android:duration="40" />
-          <item android:drawable="@drawable/b6" android:duration="40" />
-            <item android:drawable="@drawable/b7" android:duration="40" />
-              <item android:drawable="@drawable/b8" android:duration="40" />
-                <item android:drawable="@drawable/b9" android:duration="40" />
-                  <item android:drawable="@drawable/b10" android:duration="40" />
-                    <item android:drawable="@drawable/b11" android:duration="40" />
-                      <item android:drawable="@drawable/b12" android:duration="40" />
-                        <item android:drawable="@drawable/b13" android:duration="40" />
-                          <item android:drawable="@drawable/b14" android:duration="40" />
-                            <item android:drawable="@drawable/b16" android:duration="40" />
-                             <item android:drawable="@drawable/b17" android:duration="50" />
-                              <item android:drawable="@drawable/b18" android:duration="60" />
-                               <item android:drawable="@drawable/b19" android:duration="70" />
-                               <item android:drawable="@drawable/b20" android:duration="80" />
-                                <item android:drawable="@drawable/b15" android:duration="90" />
+    <item android:drawable="@drawable/eld19" android:duration="40" />
+    <item android:drawable="@drawable/eld1" android:duration="40" />
+      <item android:drawable="@drawable/eld2" android:duration="40" />
+        <item android:drawable="@drawable/eld3" android:duration="40" />
+          <item android:drawable="@drawable/eld4" android:duration="40" />
+        <item android:drawable="@drawable/eld5" android:duration="50" />
+          <item android:drawable="@drawable/eld6" android:duration="50" />
+            <item android:drawable="@drawable/eld7" android:duration="50" />
+              <item android:drawable="@drawable/eld8" android:duration="50" />
+                <item android:drawable="@drawable/eld9" android:duration="50" />
+                  <item android:drawable="@drawable/eld10" android:duration="50" />
+                    <item android:drawable="@drawable/eld11" android:duration="50" />
+                      <item android:drawable="@drawable/eld12" android:duration="50" />
+                        <item android:drawable="@drawable/eld13" android:duration="50" />
+                          <item android:drawable="@drawable/eld14" android:duration="50" />
+                            <item android:drawable="@drawable/eld15" android:duration="60" />
+                             <item android:drawable="@drawable/eld16" android:duration="70" />
+                              <item android:drawable="@drawable/eld17" android:duration="80" />
+                               <item android:drawable="@drawable/eld18" android:duration="90" />
+                            
+                                <item android:drawable="@drawable/eld19" android:duration="100" />
 </animation-list>
