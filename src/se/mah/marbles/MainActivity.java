@@ -66,7 +66,7 @@ public class MainActivity extends Activity {
 	private boolean shuffleTest=false;
 	
 	private AnimationDrawable  boomAnim;
-	// Saker till tidsräkningen
+	// Saker till tidsrï¿½kningen
 	ProgressBar mProgressBar;
 	CountDownTimer mCountDownTimer;
 	
@@ -370,7 +370,7 @@ Effects.getInstance().playSound(Effects.SOUND_7);
 		 protected void onDraw(Canvas canvas) {
 			 super.onDraw(canvas);
 			 if(mChecked) {
-				 Bitmap check = BitmapFactory.decodeResource(getResources(), R.drawable.ropadope);
+				 Bitmap check = BitmapFactory.decodeResource(getResources(), R.drawable.rep2);
 				 canvas.drawBitmap(check, 3,3, new Paint());
 				 mChecked=false;
 				 
@@ -419,7 +419,7 @@ Effects.getInstance().playSound(Effects.SOUND_7);
 	}
 	
 	
- // hör till tiden
+ // hï¿½r till tiden
 	public void AddTime(int newTime){
 		myTimer.cancel();
 		time = (int)tidms +newTime;

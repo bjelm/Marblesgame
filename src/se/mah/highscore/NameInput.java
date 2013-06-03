@@ -30,7 +30,7 @@ public class NameInput extends Activity {
 		inputName= (EditText)findViewById(R.id.namn);
 		inputName.setText(" ");
 		score= (TextView) findViewById(R.id.congratz);
-		score.setText("Congratulations you scored: " + points + " points. Enter your name below!");
+		score.setText("Grattis, du fick: " + points + " poäng. Skriv in ditt namn!");
 		
 			
 	
