@@ -370,7 +370,7 @@ Effects.getInstance().playSound(Effects.SOUND_7);
 		 protected void onDraw(Canvas canvas) {
 			 super.onDraw(canvas);
 			 if(mChecked) {
-				 Bitmap check = BitmapFactory.decodeResource(getResources(), R.drawable.rep2);
+				 Bitmap check = BitmapFactory.decodeResource(getResources(), R.drawable.rep);
 				 canvas.drawBitmap(check, 3,3, new Paint());
 				 mChecked=false;
 				 
