@@ -71,7 +71,7 @@ public class HighScore extends Activity{
         
 	        if (highscore.inHighscore(mPoints)){
 
-	        	Log.i("HIGHSCORE", "Kör detta intent "+mPoints);
+	        	Log.i("HIGHSCORE", "KÔøΩr detta intent "+mPoints);
 
 	        	Intent j = new Intent(this, NameInput.class);
 	        	j.putExtra("points", mPoints);
@@ -117,7 +117,7 @@ public class HighScore extends Activity{
 	}
 		
 	
-	//Uppdaterar listan och skriver ut namnen på de som "platsar"
+	//Uppdaterar listan och skriver ut namnen pÔøΩ de som "platsar"
 		public void updateScoreList(){
 		
 		Log.i("HIGHSCOREupdate", "uppdaterar highscore, finns 1000 i highscore: "+highscore.inHighscore(1000));
@@ -133,16 +133,16 @@ public class HighScore extends Activity{
 		T9.setText("9. "+ highscore.getName(8));
 		T10.setText("10. "+highscore.getName(9));
 		
-		P1.setText("Poäng: "+highscore.getScore(0));
-		P2.setText("Poäng: "+highscore.getScore(1));
-		P3.setText("Poäng: "+highscore.getScore(2));
-		P4.setText("Poäng: "+highscore.getScore(3));
-		P5.setText("Poäng: "+highscore.getScore(4));
-		P6.setText("Poäng: "+highscore.getScore(5));
-		P7.setText("Poäng: "+highscore.getScore(6));
-		P8.setText("Poäng: "+highscore.getScore(7));
-		P9.setText("Poäng: "+highscore.getScore(8));
-		P10.setText("Poäng: "+highscore.getScore(9));
+		P1.setText("Po√§ng: "+highscore.getScore(0));
+		P2.setText("Po√§ng: "+highscore.getScore(1));
+		P3.setText("Po√§ng: "+highscore.getScore(2));
+		P4.setText("Po√§ng: "+highscore.getScore(3));
+		P5.setText("Po√§ng: "+highscore.getScore(4));
+		P6.setText("Po√§ng: "+highscore.getScore(5));
+		P7.setText("Po√§ng: "+highscore.getScore(6));
+		P8.setText("Po√§ng: "+highscore.getScore(7));
+		P9.setText("Po√§ng: "+highscore.getScore(8));
+		P10.setText("Po√§ng: "+highscore.getScore(9));
 
 		}
 		
@@ -154,7 +154,7 @@ public class HighScore extends Activity{
 		}
 		public void backtostart (View v){
 			/* 
-			//l‰gg in r‰tt klassnamn, fˆr att sedan starta start-menyn
+			//lÔøΩgg in rÔøΩtt klassnamn, fÔøΩr att sedan starta start-menyn
 			Intent i = new Intent(this, MainActivity.class);
 			startActivity(i);
 			finish();
