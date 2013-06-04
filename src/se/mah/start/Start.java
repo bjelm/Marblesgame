@@ -24,7 +24,7 @@ public class Start extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.starta_main);
 		
-		final MediaPlayer bamboosound = MediaPlayer.create(Start.this, R.raw.bamboo);
+		bamboosound = MediaPlayer.create(Start.this, R.raw.bamboo);
 		bamboosound.setLooping(true);
 		bamboosound.start();
 
@@ -70,20 +70,20 @@ public class Start extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-	/*	
+	
 	@Override
 	public void onPause() {
 	    super.onPause();
 	    bamboosound.pause();
 	}
-
+*/
 	protected void onDestroy() {
 	    super.onDestroy();
 	    if(bamboosound != null) {
 	        bamboosound.stop();  
 	        bamboosound.release();
 	    }
-	}*/
+	}
 	
 	public void valjsvarighet (View v){
 		Intent i = new Intent(this, svarighetsgrad.class);
