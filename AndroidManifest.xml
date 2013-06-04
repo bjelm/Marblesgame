@@ -28,6 +28,11 @@
             android:name="se.mah.highscore.HighScore"
             android:screenOrientation="portrait"
            > </activity>
+        
+        <activity
+            android:name="se.mah.start.Instruktions"
+            android:screenOrientation="portrait"
+           > </activity>
          
         <activity 
             android:name="se.mah.highscore.NameInput"
