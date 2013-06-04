@@ -476,6 +476,16 @@ Effects.getInstance().playSound(Effects.SOUND_7);
 	 }
 
 	
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+
+		myTimer.cancel();
+		
+		
+		
+	}
+	
 }
 
 
