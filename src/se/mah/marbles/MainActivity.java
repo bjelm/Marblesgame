@@ -195,13 +195,15 @@ public class MainActivity extends Activity {
 				    	 cv.startAnimation(anim);
 				    	 cv_first.startAnimation(anim);
 				    	 
+				    	Effects.getInstance().playSound(Effects.SOUND_9);
 				    	boomAnim.stop();
 				    	boomAnim.start();
+				    	Effects.getInstance().playSound(Effects.SOUND_5);
 				    	
 				    	 
-				    	 Effects.getInstance().playSound(Effects.SOUND_9);
+				    	
 				    	 glitterAnim.stop();
-						    glitterAnim.start();
+						 glitterAnim.start();
 				    	 myGame.addScore(1000);
 				    	 scoreTxt.setText("Score: "+myGame.getScore());
 				    	 AddTime(10000);
