@@ -340,39 +340,41 @@
             android:textSize="20sp" />
     </TableRow>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent" >
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="100" >
+        
         <ImageButton
+          
             android:id="@+id/imageButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginRight="50dp"
-            android:layout_weight="0.48"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="40"
             android:background="@null"
+            android:scaleType="fitCenter"
             android:onClick="restart"
             android:src="@drawable/omstart" />
 
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
+   
         <ImageButton
+            
             android:id="@+id/imageButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginRight="50dp"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="40"
             android:background="@null"
+       
             android:onClick="backtostart"
+            android:scaleType="fitCenter"
+           
             android:src="@drawable/tillbaka" />
+                
+    </LinearLayout>
 
-    </RelativeLayout>
 
 </TableLayout>
