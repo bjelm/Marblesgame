@@ -27,7 +27,7 @@ public class Sorry extends Activity {
 		int points = getIntent().getExtras().getInt("points");
 		
 		//String s2= getIntent().getExtras().getString("Sorry");
-		Sorry.setText("Tyvärr, du fick inte tillräckligt med poäng fär topplistan! \n Din poäng: " + points);
+		Sorry.setText("Tyvärr, du fick inte tillräckligt med poäng för topplistan! \n Din poäng: " + points);
 		
 }
 	public void start (View v){
