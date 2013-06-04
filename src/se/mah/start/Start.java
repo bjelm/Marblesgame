@@ -36,11 +36,11 @@ public class Start extends Activity {
 			boolean flag=false;
 			public void onClick(View v) {
 		    if (!flag ) {
-		        mute2.setBackgroundResource(R.drawable.bambmute);
+		        mute2.setBackgroundResource(R.drawable.soundoff);
 		        flag=true; 
 		        
 		    }else{
-		          mute2.setBackgroundResource(R.drawable.bambunmute);
+		          mute2.setBackgroundResource(R.drawable.soundon);
 		          flag=false;
 		    }
 		    if(v == findViewById(R.id.mute)){
