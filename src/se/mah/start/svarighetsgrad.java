@@ -6,10 +6,12 @@ import se.mah.marbles.MainActivity;
 import se.mah.marbles.R;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
@@ -20,7 +22,8 @@ public class svarighetsgrad extends Activity {
 	private String Nysvarighet = "simple" ;
 	private int selectedID;
 	RadioGroup rg;
-
+    private ImageView flameView;
+    private AnimationDrawable flame2;
 	
 	final OnCheckedChangeListener lyssnare = new OnCheckedChangeListener() {
 		
@@ -47,6 +50,12 @@ public class svarighetsgrad extends Activity {
 
 		rg = (RadioGroup) findViewById(R.id.svarighet);
 		rg.setOnCheckedChangeListener(lyssnare);
+		
+	    flameView = (ImageView)findViewById(R.id.img1);
+		flameView.setImageBitmap(null);
+		flameView.setBackgroundResource( R.drawable.bigflameanim);
+		flame2= (AnimationDrawable) flameView.getBackground();
+		flame2.start();
 		
 
 		
