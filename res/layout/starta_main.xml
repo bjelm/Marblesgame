@@ -17,7 +17,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="72dp"
-        android:background="@drawable/bambunmute" />
+        android:layout_marginRight="30dp"
+        android:background="@drawable/soundon" />
 
     <ImageButton
         android:id="@+id/spela"
