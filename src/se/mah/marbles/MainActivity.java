@@ -60,8 +60,8 @@ public class MainActivity extends Activity {
 	private boolean mChecked;
     private TextView scoreTxt ;
 	private Cardcollection myCards = new Cardcollection();
-	private Game myGame	= new Game("simple");
-	
+	private Game myGame;
+	private String newLevel;
 	
 	private boolean shuffleTest=false;
 	
@@ -81,7 +81,7 @@ public class MainActivity extends Activity {
 	 private MyTimer myTimer;
 	//
 	
-    private ArrayList<Picture> randomList = new ArrayList<Picture>(myCards.getMycards(myGame.getLevel()));
+    private ArrayList<Picture> randomList;
    
     @Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -102,6 +102,18 @@ public class MainActivity extends Activity {
 		myTimer = new MyTimer(time, sec);
 		myTimer.start();
 		/////
+		
+		
+		newLevel = getIntent().getExtras().getString("svar");
+		myGame	= new Game(newLevel);
+		 randomList = new ArrayList<Picture>(myCards.getMycards(myGame.getLevel()));
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -263,7 +275,7 @@ public class MainActivity extends Activity {
 
 Effects.getInstance().playSound(Effects.SOUND_7);
 	randomList.clear();
-	randomList = myCards.getMycards("simple");
+	randomList = myCards.getMycards(myGame.getLevel());
 	//myImageAdapter.imageView.startAnimation(anim_shuffle);
 	shuffleTest=true;
 	myImageAdapter.notifyDataSetChanged();
