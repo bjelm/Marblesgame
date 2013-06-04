@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false" >
+     <item android:drawable="@drawable/bigtiki1" android:duration="300" />
+      <item android:drawable="@drawable/bigtiki2" android:duration="300" />
+       <item android:drawable="@drawable/bigtiki3" android:duration="300" />
+        <item android:drawable="@drawable/bigtiki4" android:duration="200" />
+
+</animation-list>
