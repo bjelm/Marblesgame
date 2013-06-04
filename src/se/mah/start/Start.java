@@ -104,6 +104,8 @@ public class Start extends Activity {
 	
 	}
 	public void spelaInst (View v){
+		Intent i2 = new Intent(this, Instruktions.class);
+		startActivity(i2);
 		
 	}
 	
