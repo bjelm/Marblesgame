@@ -88,7 +88,7 @@ public class Start extends Activity {
 	public void valjsvarighet (View v){
 		Intent i = new Intent(this, svarighetsgrad.class);
 		startActivity(i);
-		finish();
+		//finish();
 	
 	}
 	
