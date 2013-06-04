@@ -29,7 +29,7 @@
         android:layout_marginLeft="20dp"
         android:onClick="valjsvarighet"
         android:scaleType="fitXY"
-        android:src="@drawable/spelaknapp"
+        android:src="@drawable/playknapp"
         android:background="@null"
         android:text="Spela" />
 
