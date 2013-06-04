@@ -199,7 +199,7 @@ public class MainActivity extends Activity {
 				    	boomAnim.start();
 				    	
 				    	 
-				    	 Effects.getInstance().playSound(Effects.SOUND_5);
+				    	 Effects.getInstance().playSound(Effects.SOUND_9);
 				    	 glitterAnim.stop();
 						    glitterAnim.start();
 				    	 myGame.addScore(1000);
