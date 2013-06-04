@@ -10,7 +10,34 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Start" >
 
-    <ImageButton
+   
+   
+      <ImageButton
+          android:id="@+id/spela"
+        
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/inst"
+          android:layout_centerHorizontal="true"
+          android:layout_marginBottom="27dp"
+          android:background="@null"
+          android:onClick="valjsvarighet"
+          android:scaleType="fitXY"
+          android:src="@drawable/playknapp" />
+      
+         <ImageButton
+          android:id="@+id/inst"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/mute"
+          android:layout_alignLeft="@+id/spela"
+          android:layout_marginBottom="100dp"
+          android:background="@null"
+          android:onClick="spelaInst"
+          android:scaleType="fitXY"
+          android:src="@drawable/instukknapp" />
+         
+          <ImageButton
         android:id="@+id/mute"
         android:layout_width="50dip"
         android:layout_height="50dip"
@@ -19,29 +46,7 @@
         android:layout_marginBottom="72dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/soundon" />
-
-      <ImageButton
-          android:id="@+id/inst"
-          android:layout_width="150dip"
-          android:layout_height="60dip"
-          android:layout_above="@+id/mute"
-          android:layout_alignLeft="@+id/spela"
-          android:layout_marginBottom="147dp"
-          android:background="@null"
-          android:onClick="spelaInst"
-          android:scaleType="fitXY"
-          android:src="@drawable/instukknapp" />
-
-      <ImageButton
-          android:id="@+id/spela"
-          android:layout_width="150dip"
-          android:layout_height="60dip"
-          android:layout_above="@+id/inst"
-          android:layout_centerHorizontal="true"
-          android:layout_marginBottom="27dp"
-          android:background="@null"
-          android:onClick="valjsvarighet"
-          android:scaleType="fitXY"
-          android:src="@drawable/playknapp" />
+         
+      
 
 </RelativeLayout>
