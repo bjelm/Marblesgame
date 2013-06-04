@@ -17,30 +17,42 @@
        android:layout_height="wrap_content">
     
       <TextView 
-     android:id="@+id/scoreview"
+       android:id="@+id/scoreview"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:paddingLeft="30dp"
-       android:paddingRight="20dp"
+       android:paddingRight="5dp"
        android:layout_marginTop="31dp"
        android:textSize="30sp"
        android:textStyle="bold"
        android:textColor="#000000"
-       android:shadowColor="#FFFFFF"
-       android:shadowRadius="5"
+       android:typeface="serif"
+
+       
+    />
+      <TextView 
+     android:id="@+id/scoreview2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_toRightOf="@+id/scoreview"
+       android:paddingRight="20dp"
+       android:layout_marginTop="31dp"
+       android:textSize="30sp"
+       android:textStyle="bold"
+       android:textColor="#FFDD00"
        android:typeface="serif"
 
        
     />
        <ImageView
         android:id="@+id/imageanim3"
-        android:layout_width="@+id/scoreview"
-        android:layout_height="@+id/scoreview"
-        android:layout_alignTop="@+id/scoreview"
-        android:layout_alignBottom="@+id/scoreview"
-       android:layout_alignLeft="@+id/scoreview"
-       android:layout_alignRight="@+id/scoreview"
-       android:layout_marginLeft="20dp"
+        android:layout_width="@+id/scoreview2"
+        android:layout_height="@+id/scoreview2"
+        android:layout_alignTop="@+id/scoreview2"
+        android:layout_alignBottom="@+id/scoreview2"
+       android:layout_alignLeft="@+id/scoreview2"
+       android:layout_alignRight="@+id/scoreview2"
+      
        android:scaleType="fitXY"
    
          />

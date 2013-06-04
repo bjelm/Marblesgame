@@ -49,6 +49,7 @@ public class MainActivity extends Activity {
 
 	private Animation anim;
 	private Animation anim_nopar;
+	private Animation anim_score;
 	private Animation anim_shuffle;
 	private GridView gridView;
 	private ImageAdapter myImageAdapter;	
@@ -59,6 +60,7 @@ public class MainActivity extends Activity {
 	private int firstClick,secondClick;
 	private boolean mChecked;
     private TextView scoreTxt ;
+    private TextView scoreTxt2;
 	private Cardcollection myCards = new Cardcollection();
 	private Game myGame;
 	private String newLevel;
@@ -138,8 +140,12 @@ public class MainActivity extends Activity {
 		
 		/////
 		scoreTxt = (TextView) findViewById(R.id.scoreview);
+		scoreTxt2 = (TextView) findViewById(R.id.scoreview2);
+		
 		anim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.myanim);
 		anim_nopar = AnimationUtils.loadAnimation(MainActivity.this, R.anim.noparanim);
+		anim_score = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scoreanim);
+		
 		anim_shuffle=AnimationUtils.loadAnimation(this,R.anim.rotateanim);
 		
 		Effects.getInstance().init(this);
@@ -151,7 +157,8 @@ public class MainActivity extends Activity {
 		myImageAdapter.notifyDataSetChanged();
 		gridView.setAdapter(myImageAdapter);
 		gridView.invalidateViews();
-		scoreTxt.setText("Score:"+myGame.getScore());
+		scoreTxt.setText("Score:");
+		scoreTxt2.setText(""+myGame.getScore());
 	
 		
 		gridView.setOnItemClickListener(new OnItemClickListener() {
@@ -160,9 +167,9 @@ public class MainActivity extends Activity {
 			@Override
 			public void onItemClick(AdapterView parent, View v, int position,long id) {
 				
-
-				scoreTxt.setText("Score: "+myGame.getScore());
-			
+				scoreTxt.setText("Score:");
+				scoreTxt2.setText(""+myGame.getScore());
+			    scoreTxt2.startAnimation(anim_nopar);
 				
 				
 				  cv = (CheckableImageView) v;
@@ -217,7 +224,10 @@ public class MainActivity extends Activity {
 				    	 glitterAnim.stop();
 						 glitterAnim.start();
 				    	 myGame.addScore(1000);
-				    	 scoreTxt.setText("Score: "+myGame.getScore());
+				    	 scoreTxt.setText("Score:");
+				    	 scoreTxt2.setText(""+myGame.getScore());  
+				    	 scoreTxt2.startAnimation(anim_nopar);
+				    	 
 				    	 AddTime(10000);
 			    	 }
 			    	 
@@ -232,7 +242,9 @@ public class MainActivity extends Activity {
 				    	 glitterAnim.stop();
 						    glitterAnim.start();
 				    	 myGame.addScore(500);
-				    	 scoreTxt.setText("Score: "+myGame.getScore());
+				    	 scoreTxt.setText("Score:");
+				    	 scoreTxt2.setText(""+myGame.getScore());
+				    	  scoreTxt2.startAnimation(anim_nopar);
 				    	 AddTime(5000);
 			    	 }
 			    	 
@@ -243,6 +255,10 @@ public class MainActivity extends Activity {
 			    		 Effects.getInstance().playSound(Effects.SOUND_6);
 
 			    	 }
+			    	 ///teeeeeeeeeeeeeeeeest
+			    	  scoreTxt2.startAnimation(anim_score);
+			    	 glitterAnim.stop();
+					 glitterAnim.start();
 			    	 
 			    	 shuffleTest=false;
 			    	 mChecked=false;
