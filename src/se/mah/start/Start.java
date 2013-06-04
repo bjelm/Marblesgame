@@ -10,19 +10,31 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 public class Start extends Activity {
 	MediaPlayer bamboosound;
+	
+	private AnimationDrawable flame2;
+	private ImageView flameView;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.starta_main);
+		
+//		flameView = (ImageView)findViewById(R.id.imageView1);
+//		flameView.setImageBitmap(null);
+//		flameView.setBackgroundResource( R.drawable.bigflameanim);
+//		flame2= (AnimationDrawable) flameView.getBackground();
+//		flame2.start();
 		
 		bamboosound = MediaPlayer.create(Start.this, R.raw.bamboo);
 		bamboosound.setLooping(true);
@@ -90,6 +102,9 @@ public class Start extends Activity {
 		startActivity(i);
 		//finish();
 	
+	}
+	public void spelaInst (View v){
+		
 	}
 	
 }
