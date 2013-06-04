@@ -27,39 +27,20 @@ public class svarighetsgrad extends Activity {
 	        case R.id.easy:
 	            if (checked)
 	                svarighet = "easy";
+	          
 	            break;
 	        case R.id.medium:
 	            if (checked)
 	            	svarighet = "medium";
+	        
 	            break;
 	        case R.id.hard:
 	            if (checked)
 	            	svarighet = "hard";
+	        
 	            break;
 	    }
-	
-	    
-	   // RadioGroup rg = (RadioGroup) findViewById(R.id.svarighet);
-	    //int svarighet = rg.getCheckedRadioButtonId();
-	    //Intent intent = new Intent(this,spela.class);
-	    //intent.putExtra("svarighet",svarighet);	    
-	    
-/*
-		ImageButton starta = (ImageButton) findViewById(R.id.starta);
-		starta.setOnClickListener(new View.OnClickListener() {			
-			@Override
-            public void onClick(View v) {
-				
-		
-				Intent j = new Intent(this, MainActivity.class);
-                  //Intent i= new Intent(this, MainActivity.class);
-                  j.putExtra("svar", svarighet);
-                  startActivity(j);
-                  finish();
-            }
-			});
-		};
-		*/
+
 		}
 		
 		
@@ -70,12 +51,7 @@ public class svarighetsgrad extends Activity {
 			finish();
 		
 		}
-    
+		
+	
 }
-		/*	@Override
-			public void onClick(View v) {
-				startActivity(new Intent("com.example.miccheck.SPELA"));
-			}
-		});
-}*/
 
