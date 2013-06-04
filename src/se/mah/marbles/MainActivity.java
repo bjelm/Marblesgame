@@ -169,7 +169,7 @@ public class MainActivity extends Activity {
 				
 				scoreTxt.setText("Score:");
 				scoreTxt2.setText(""+myGame.getScore());
-			    scoreTxt2.startAnimation(anim_nopar);
+			
 				
 				
 				  cv = (CheckableImageView) v;
@@ -224,10 +224,12 @@ public class MainActivity extends Activity {
 				    	 glitterAnim.stop();
 						 glitterAnim.start();
 				    	 myGame.addScore(1000);
-				    	 scoreTxt.setText("Score:");
-				    	 scoreTxt2.setText(""+myGame.getScore());  
-				    	 scoreTxt2.startAnimation(anim_nopar);
-				    	 
+				    	
+				          scoreTxt.setText("Score:");
+						  scoreTxt2.setText(""+myGame.getScore());
+				    	  scoreTxt2.startAnimation(anim_score);
+				    	 glitterAnim.stop();
+						 glitterAnim.start();
 				    	 AddTime(10000);
 			    	 }
 			    	 
@@ -242,13 +244,18 @@ public class MainActivity extends Activity {
 				    	 glitterAnim.stop();
 						    glitterAnim.start();
 				    	 myGame.addScore(500);
+				    	 
+				    	 
 				    	 scoreTxt.setText("Score:");
-				    	 scoreTxt2.setText(""+myGame.getScore());
-				    	  scoreTxt2.startAnimation(anim_nopar);
+						 scoreTxt2.setText(""+myGame.getScore());
+				    	 scoreTxt2.startAnimation(anim_score);
+				    	 glitterAnim.stop();
+						 glitterAnim.start();
 				    	 AddTime(5000);
 			    	 }
 			    	 
 			    	 else{
+			    		scoreTxt2.startAnimation(anim_nopar);
 			    		 RemoveTime(5000);
 			    		 cv.startAnimation(anim_nopar);
 			    		 cv_first.startAnimation(anim_nopar);
@@ -256,9 +263,7 @@ public class MainActivity extends Activity {
 
 			    	 }
 			    	 ///teeeeeeeeeeeeeeeeest
-			    	  scoreTxt2.startAnimation(anim_score);
-			    	 glitterAnim.stop();
-					 glitterAnim.start();
+			    
 			    	 
 			    	 shuffleTest=false;
 			    	 mChecked=false;
