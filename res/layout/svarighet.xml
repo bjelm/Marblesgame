@@ -9,13 +9,15 @@
 
     <RadioGroup
         android:id="@+id/svarighet"
-        android:layout_width="fill_parent"
+        android:layout_width="200dp"
         android:layout_height="0dp"
-        android:layout_weight="90">
+        android:layout_weight="90"
+        
+        android:layout_gravity="center">
    
     <RadioButton
         android:id="@+id/hard"
-        android:layout_width="fill_parent"
+        android:layout_width="200dp"
         android:layout_height="0dp"
         android:layout_gravity="center"
         android:layout_margin="30dp"
@@ -25,7 +27,7 @@
 
     <RadioButton
         android:id="@+id/medium"
-        android:layout_width="fill_parent"
+        android:layout_width="200dp"
         android:layout_height="0dp"
         android:layout_gravity="center"
         android:layout_margin="30dp"
@@ -35,7 +37,7 @@
 
     <RadioButton
         android:id="@+id/easy"
-        android:layout_width="fill_parent"
+        android:layout_width="200dp"
         android:layout_height="0dp"
         android:layout_gravity="center"
         android:layout_margin="30dp"
