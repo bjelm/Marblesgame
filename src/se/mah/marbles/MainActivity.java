@@ -66,6 +66,7 @@ public class MainActivity extends Activity {
 	private boolean shuffleTest=false;
 	
 	private AnimationDrawable  boomAnim;
+	private AnimationDrawable  glitterAnim;
 	// Saker till tidsr�kningen
 	ProgressBar mProgressBar;
 	CountDownTimer mCountDownTimer;
@@ -117,6 +118,10 @@ public class MainActivity extends Activity {
 		boomAnim = (AnimationDrawable) boom.getBackground();
 
 
+		ImageView glitter = (ImageView)findViewById(R.id.imageanim3);
+		glitter.setImageBitmap(null);
+		glitter.setBackgroundResource( R.drawable.glitteranim);
+		glitterAnim = (AnimationDrawable) glitter.getBackground();
 		
 		
 		/////
@@ -178,6 +183,7 @@ public class MainActivity extends Activity {
 				    	 cv_first.startAnimation(anim_nopar);
 				    	 RemoveTime(5000);
 				    	 Effects.getInstance().playSound(Effects.SOUND_6);
+				    	 
 			    	 }
 			    	 
 			    	 else if ((randomList.get(firstClick).returnCategory() == randomList.get(secondClick).returnCategory()) &&
@@ -194,6 +200,8 @@ public class MainActivity extends Activity {
 				    	
 				    	 
 				    	 Effects.getInstance().playSound(Effects.SOUND_5);
+				    	 glitterAnim.stop();
+						    glitterAnim.start();
 				    	 myGame.addScore(1000);
 				    	 scoreTxt.setText("Score: "+myGame.getScore());
 				    	 AddTime(10000);
@@ -207,6 +215,8 @@ public class MainActivity extends Activity {
 				    	 cv_first.startAnimation(anim);
 				    	 
 				    	 Effects.getInstance().playSound(Effects.SOUND_8);
+				    	 glitterAnim.stop();
+						    glitterAnim.start();
 				    	 myGame.addScore(500);
 				    	 scoreTxt.setText("Score: "+myGame.getScore());
 				    	 AddTime(5000);
@@ -231,9 +241,9 @@ public class MainActivity extends Activity {
 //					 megAnimation.start();
 			    	
 			    
-			    	 boomAnim.stop();
-				    	boomAnim.start();
-			    	 Handler myHandler = new Handler();
+			    
+			    	 
+				    	Handler myHandler = new Handler();
 			    	 myHandler.postDelayed(myRunnable, 500);
 
 			      }

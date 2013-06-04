@@ -12,7 +12,10 @@
        android:layout_height="wrap_content"
        android:orientation="horizontal">
    
-      
+       <RelativeLayout 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+    
       <TextView 
      android:id="@+id/scoreview"
        android:layout_width="wrap_content"
@@ -29,8 +32,20 @@
 
        
     />
+       <ImageView
+        android:id="@+id/imageanim3"
+        android:layout_width="@+id/scoreview"
+        android:layout_height="@+id/scoreview"
+        android:layout_alignTop="@+id/scoreview"
+        android:layout_alignBottom="@+id/scoreview"
+       android:layout_alignLeft="@+id/scoreview"
+       android:layout_alignRight="@+id/scoreview"
+       android:layout_marginLeft="20dp"
+       android:scaleType="fitXY"
+   
+         />
       
-      
+       </RelativeLayout>
       <ProgressBar
          android:id="@+id/progressbar"
          style="@android:style/Widget.ProgressBar.Horizontal"
