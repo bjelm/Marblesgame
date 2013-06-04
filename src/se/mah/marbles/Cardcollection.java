@@ -220,8 +220,8 @@ public class Cardcollection {
 		cards_medium.add(new Picture(R.drawable.card_35, 35,1));
 		cards_medium.add(new Picture(R.drawable.card_35_35, 35,2));
 		
-		cards_medium.add(new Picture(R.drawable.card_36, 36,1));
-		cards_medium.add(new Picture(R.drawable.card_36_36, 36,2));
+		cards_medium.add(new Picture(R.drawable.card_36, 17,2));
+		cards_medium.add(new Picture(R.drawable.card_36_36, 17,1));
 		
 		cards_medium.add(new Picture(R.drawable.card_37, 37,1));
 		cards_medium.add(new Picture(R.drawable.card_37_37, 37,2));
@@ -251,8 +251,8 @@ public class Cardcollection {
 		cards_medium.add(new Picture(R.drawable.card_35, 35,1));
 		cards_medium.add(new Picture(R.drawable.card_35_35, 35,2));
 		
-		cards_medium.add(new Picture(R.drawable.card_36, 36,1));
-		cards_medium.add(new Picture(R.drawable.card_36_36, 36,2));
+		cards_medium.add(new Picture(R.drawable.card_36, 17,2));
+		cards_medium.add(new Picture(R.drawable.card_36_36, 17,1));
 		
 		cards_medium.add(new Picture(R.drawable.card_37, 37,1));
 		cards_medium.add(new Picture(R.drawable.card_37_37, 37,2));
@@ -378,8 +378,8 @@ public class Cardcollection {
 		cards_hard.add(new Picture(R.drawable.card_35, 35,1));
 		cards_hard.add(new Picture(R.drawable.card_35_35, 35,2));
 		
-		cards_hard.add(new Picture(R.drawable.card_36, 36,1));
-		cards_hard.add(new Picture(R.drawable.card_36_36, 36,2));
+		cards_hard.add(new Picture(R.drawable.card_36, 17,2));
+		cards_hard.add(new Picture(R.drawable.card_36_36, 17,1));
 		
 		cards_hard.add(new Picture(R.drawable.card_37, 37,1));
 		cards_hard.add(new Picture(R.drawable.card_37_37, 37,2));
@@ -399,7 +399,7 @@ public class Cardcollection {
 	
 	public ArrayList<Picture> getMycards(String choice){
 		
-		//VŠlj random 12 bilder och returneras
+		//Vï¿½lj random 12 bilder och returneras
 		ArrayList<Picture> shuffledCards = new ArrayList<Picture>();
 		
 		if(choice.equals("simple")){
