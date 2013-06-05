@@ -25,6 +25,8 @@ public class Effects {
 	public static final int SOUND_7 = 7;
 	public static final int SOUND_8 = 8;
 	public static final int SOUND_9 = 9;
+	//public static final int SOUND_12 = 12;
+	//public static final int SOUND_11 = 11;
 
 	private Effects() {
 		
@@ -53,7 +55,7 @@ public class Effects {
 
 	//----H�R L�GGER MAN IN LJUDEN---------------------------------------------------------------
 	soundPoolMap.put(SOUND_1, soundPool.load(context, R.raw.button29, 1));
-	soundPoolMap.put(SOUND_2, soundPool.load(context, R.raw.cartoon017, 2));
+	soundPoolMap.put(SOUND_2, soundPool.load(context, R.raw.woohoo, 2));
 	soundPoolMap.put(SOUND_1, soundPool.load(context, R.raw.button11, 3));
 	soundPoolMap.put(SOUND_2, soundPool.load(context, R.raw.cartoon024, 4));
 	soundPoolMap.put(SOUND_5, soundPool.load(context, R.raw.kidscheering, 5));
@@ -61,6 +63,8 @@ public class Effects {
 	soundPoolMap.put(SOUND_7, soundPool.load(context, R.raw.wood, 7));
 	soundPoolMap.put(SOUND_8, soundPool.load(context, R.raw.femhundrapoints, 8));
 	soundPoolMap.put(SOUND_9, soundPool.load(context, R.raw.fireball, 9));
+	//soundPoolMap.put(SOUND_11, soundPool.load(context, R.raw.bubbles1, 11));
+	//soundPoolMap.put(SOUND_12, soundPool.load(context, R.raw.bubbles2, 12));
 
 	AudioManager audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
 	volume = audioManager.getStreamVolume(AudioManager.STREAM_SYSTEM);

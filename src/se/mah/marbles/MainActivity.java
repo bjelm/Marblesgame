@@ -244,7 +244,7 @@ public class MainActivity extends Activity {
 				    	 cv.startAnimation(anim);
 				    	 cv_first.startAnimation(anim);
 				    	 
-				    	 Effects.getInstance().playSound(Effects.SOUND_8);
+				    	 Effects.getInstance().playSound(Effects.SOUND_2);
 				    	 glitterAnim.stop();
 						    glitterAnim.start();
 				    	 myGame.addScore(500);
