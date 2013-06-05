@@ -32,7 +32,7 @@
         android:layout_width="200dp"
         android:layout_height="0dp"
         android:layout_gravity="center"
-        android:layout_margin="30dp"
+       
         android:layout_weight="100"
         android:background="@drawable/hardxml"
         android:button="@null" />
@@ -42,7 +42,7 @@
         android:layout_width="200dp"
         android:layout_height="0dp"
         android:layout_gravity="center"
-        android:layout_margin="30dp"
+       
         android:layout_weight="100"
         android:background="@drawable/mellanxml"
         android:button="@null" />
@@ -52,7 +52,7 @@
         android:layout_width="200dp"
         android:layout_height="0dp"
         android:layout_gravity="center"
-        android:layout_margin="30dp"
+        
         android:layout_weight="100"
         android:background="@drawable/easyxml"
         android:button="@null"
