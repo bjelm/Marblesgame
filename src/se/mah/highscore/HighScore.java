@@ -155,11 +155,14 @@ public class HighScore extends Activity{
 		}
 		public void backtostart (View v){
 			
-			//l�gg in r�tt klassnamn, f�r att sedan starta start-menyn
-			Intent i = new Intent(this, Start.class);
-			startActivity(i);
-			finish();
+		
 			
+		    Intent intent = new Intent(getApplicationContext(),
+		            Start.class);
+		    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+		    startActivity(intent);
+		//	finish();
 		}
 
  }
