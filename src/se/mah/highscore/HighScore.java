@@ -20,6 +20,7 @@ public class HighScore extends Activity{
 	private TextView T1, T2, T3, T4, T5, T6, T7, T8, T9, T10,P1,P2,P3,P4,P5,P6,P7,P8,P9,P10, sorry;
 
 	private int mPoints;
+	private String newLevel;
     Boolean checkIfStarted = false;
     
     //Skapa highscore av klassen HighScoreScores 
@@ -32,7 +33,7 @@ public class HighScore extends Activity{
 		setContentView(R.layout.highscore_main);		
 		
 
-		
+		newLevel = getIntent().getExtras().getString("level");
 		
 		
 		highscore = new HighScoreScores(HighScore.this); //"this" is the Context
@@ -150,6 +151,7 @@ public class HighScore extends Activity{
 		//knappmetoder
 		public void restart (View v){
 			Intent i = new Intent(this, MainActivity.class);
+			i.putExtra("level", newLevel );
 			startActivity(i);
 			finish();
 		}

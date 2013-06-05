@@ -107,6 +107,10 @@ public class MainActivity extends Activity {
 		
 		
 		newLevel = getIntent().getExtras().getString("svar");
+		if (newLevel == null) {
+			newLevel = getIntent().getExtras().getString("level");
+		}
+		
 		myGame	= new Game(newLevel);
 		 randomList = new ArrayList<Picture>(myCards.getMycards(myGame.getLevel()));
 		
@@ -451,6 +455,7 @@ Effects.getInstance().playSound(Effects.SOUND_7);
 		
          Intent i = new Intent(this,HighScore.class );
 	     i.putExtra("score",p);	
+	     i.putExtra("level",newLevel);
 	     startActivity(i);
 		 finish();
 }
