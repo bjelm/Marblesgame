@@ -83,7 +83,7 @@ public class HighScore extends Activity{
 	    		Log.i("HIGHSCOREscore", "score "+mPoints);
 				Intent j = new Intent(this, Sorry.class);
 				j.putExtra("points", mPoints);
-				startActivity(j);
+				startActivityForResult(j,0);
 			}
         } 
 	}
@@ -98,7 +98,7 @@ public class HighScore extends Activity{
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 			// TODO Auto-generated method stub
-		
+		 if (checkIfStarted == false){
 		String s = data.getExtras().getString("name");
 		
 		Log.i("HIGHSCOREnamn", "namn "+s);
@@ -116,6 +116,7 @@ public class HighScore extends Activity{
 	    }
 	 
 	    updateScoreList();
+		 }
 	}
 		
 	
