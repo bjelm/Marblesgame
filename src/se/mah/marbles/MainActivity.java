@@ -234,7 +234,9 @@ public class MainActivity extends Activity {
 				    	  scoreTxt2.startAnimation(anim_score);
 				    	 glitterAnim.stop();
 						 glitterAnim.start();
-				    	 AddTime(10000);
+						 if (tidsint < 60){
+					    	 AddTime(10000);
+							 }
 			    	 }
 			    	 
 			    	 else if (randomList.get(firstClick).returnCategory() == randomList.get(secondClick).returnCategory()){			    	
@@ -255,7 +257,10 @@ public class MainActivity extends Activity {
 				    	 scoreTxt2.startAnimation(anim_score);
 				    	 glitterAnim.stop();
 						 glitterAnim.start();
+						 
+						 if (tidsint < 60){
 				    	 AddTime(5000);
+						 }
 			    	 }
 			    	 
 			    	 else{
